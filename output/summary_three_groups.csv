@@ -1,0 +1,4 @@
+scenario,reference_dH_nm,estimated_dH_nm,ci_low_nm,ci_high_nm,relative_error_percent,D_um2_s,n_tracks,n_localizations,n_videos,n_videos_with_tracks,model
+mono30,30,29.8104176,29.1245665,30.5647223,-0.631941376,14.7498252,274,30819,20,20,wrcve
+mono100,100,102.116422,100.555198,103.375256,2.1164222,4.30585442,80,37020,20,16,wrcve
+mono200,200,201.942223,198.104618,206.268824,0.971111743,2.17734776,58,45568,20,17,wrcve
