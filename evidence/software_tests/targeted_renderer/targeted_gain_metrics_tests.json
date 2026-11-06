@@ -1,0 +1,13 @@
+{
+  "scope": "Illumination metric correctness only, not estimator or sizing acceptance",
+  "global_uncorrected_rms": 0.05656854249492381,
+  "global_perfect_correction_rms": 0,
+  "local_baseline_rms": 0.040000000000000008,
+  "local_right_artificial_rms": 0.02830125936764271,
+  "nonbinary_weighted_matches_pixelwise": true,
+  "constant_gain_scale_invariant": true,
+  "temporal_mean_normalization": true,
+  "static_baseline_strict_zero": true,
+  "invalid_inputs_rejected": 27,
+  "pass": true
+}

@@ -1,0 +1,18 @@
+{
+  "analysis": "post-hoc paired velocity diagnostics from saved video bootstrap",
+  "schema_version": 1,
+  "source_summary": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\targeted_ablation_results_v2\\summary.mat",
+  "source_summary_sha256": "acca78c1d0805538be3dda8ba4ce73b4682d230da6e9e7fa237e3a4bfd49584f",
+  "source_protocol_hash": "64e96bb4007a09db5f5701bd8d183e5a9a7eb0e16ccc08f452033a8a9f5a0803",
+  "helper_file": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\iNTA_patent_candidate\\tests\\write_paired_velocity_diagnostics",
+  "helper_sha256": "b5d2354a2ba664d3d3746b66400c5ca81eb372b68e67d436068efb6d02ced84c",
+  "generated_at": "2026-11-06 04:56:33 *",
+  "matlab_version": "24.2.0.2712019 (R2024b)",
+  "rows": 90,
+  "primary_method": "full",
+  "difference_definition": "method minus reference, um/s",
+  "interval_definition": "paired saved video-bootstrap differences; percentile 2.5 and 97.5; pointwise exploratory",
+  "availability_rule": "both active videos >=4 and finite paired replicates >=95%; adequate separately requires >=10 active videos and >=5000 localizations in both methods",
+  "limitation": "No prespecified velocity margin; no noninferiority/equivalence or preservation claim. Truth speed is diagnostic only and never selects replicates.",
+  "original_summary_unchanged": true
+}

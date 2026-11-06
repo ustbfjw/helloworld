@@ -1,0 +1,18 @@
+{
+  "test": "candidate_summary_synthetic_fixture",
+  "passed": true,
+  "input_mat_files": 140,
+  "summary_rows": 72,
+  "pairwise_rows": 54,
+  "video_metric_rows": 3360,
+  "bootstrap_replicates": 2000,
+  "elapsed_seconds": 33.5180274,
+  "empty_videos_retained": true,
+  "one_active_video_has_no_size_ci": true,
+  "negative_D_retained": true,
+  "unidentifiable_velocity_is_nan": true,
+  "seed_mismatch_rejected": true,
+  "spatial_decision_separated_from_global_applied": true,
+  "protocol_content_hash_mismatch_rejected": true,
+  "synthetic_fixture_not_performance_evidence": true
+}

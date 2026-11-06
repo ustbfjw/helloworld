@@ -1,0 +1,17 @@
+PASS test_candidate_application: global/spatial single exact, metric error 1.41e-15, 38 invalid cases.
+                            scope: 'Application and post-inference metrics only; no sizing acceptance'
+                           frames: 235
+                     block_frames: 100
+              global_single_exact: 1
+                   identity_exact: 1
+      spatial_single_matrix_exact: 1
+             multifrequency_basis: 1
+             maximum_metric_error: 1.4051e-15
+              global_metric_exact: 1
+                 near_perfect_rms: 2.7624e-08
+    near_zero_numerical_tolerance: 1.0000e-07
+                      static_zero: 1
+          invalid_inputs_rejected: 38
+                    rng_unchanged: 1
+                             pass: 1
+

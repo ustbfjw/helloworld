@@ -1,0 +1,467 @@
+{
+  "pass": true,
+  "matlab_version": "24.2.0.2712019 (R2024b)",
+  "generated_at": "2026-11-06 05:02:05 *",
+  "test_scope": "Actual exported axes labels before deletion; fixture and formal inputs read-only",
+  "helper_sha256": "deddbfc83e08680531d4bb45e3ff6184303bf0cadb6bb1e4408953beecc4de13",
+  "test_sha256": "3cff3a324a24e24d9f53c8262d2e9702326d493357ef338a94d7faab7a51c1db",
+  "region_axes_checked": 9,
+  "global_axes_checked": 9,
+  "observed_axes": [
+    {
+      "run": "schema1_fixture",
+      "kind": "global",
+      "tick_count": 6,
+      "labels": [
+        "静态",
+        "全局423.7 Hz",
+        "保护带内11.4 Hz",
+        "保护带外13.4 Hz",
+        "同频10 Hz",
+        "左半图423.7 Hz"
+      ]
+    },
+    {
+      "run": "schema1_fixture",
+      "kind": "global",
+      "tick_count": 6,
+      "labels": [
+        "静态",
+        "全局423.7 Hz",
+        "保护带内11.4 Hz",
+        "保护带外13.4 Hz",
+        "同频10 Hz",
+        "左半图423.7 Hz"
+      ]
+    },
+    {
+      "run": "schema1_fixture",
+      "kind": "global",
+      "tick_count": 6,
+      "labels": [
+        "静态",
+        "全局423.7 Hz",
+        "保护带内11.4 Hz",
+        "保护带外13.4 Hz",
+        "同频10 Hz",
+        "左半图423.7 Hz"
+      ]
+    },
+    {
+      "run": "schema1_fixture",
+      "kind": "region",
+      "tick_count": 2,
+      "labels": [
+        "左半图423.7 Hz（左半区）",
+        "左半图423.7 Hz（右半区）"
+      ]
+    },
+    {
+      "run": "schema1_fixture",
+      "kind": "region",
+      "tick_count": 2,
+      "labels": [
+        "左半图423.7 Hz（左半区）",
+        "左半图423.7 Hz（右半区）"
+      ]
+    },
+    {
+      "run": "schema1_fixture",
+      "kind": "region",
+      "tick_count": 2,
+      "labels": [
+        "左半图423.7 Hz（左半区）",
+        "左半图423.7 Hz（右半区）"
+      ]
+    },
+    {
+      "run": "schema2_fixture",
+      "kind": "global",
+      "tick_count": 6,
+      "labels": [
+        "静态",
+        "全局423.7 Hz",
+        "同频10 Hz",
+        "高斯局部斑",
+        "平滑非均匀场",
+        "斜向阶跃"
+      ]
+    },
+    {
+      "run": "schema2_fixture",
+      "kind": "global",
+      "tick_count": 6,
+      "labels": [
+        "静态",
+        "全局423.7 Hz",
+        "同频10 Hz",
+        "高斯局部斑",
+        "平滑非均匀场",
+        "斜向阶跃"
+      ]
+    },
+    {
+      "run": "schema2_fixture",
+      "kind": "global",
+      "tick_count": 6,
+      "labels": [
+        "静态",
+        "全局423.7 Hz",
+        "同频10 Hz",
+        "高斯局部斑",
+        "平滑非均匀场",
+        "斜向阶跃"
+      ]
+    },
+    {
+      "run": "schema2_fixture",
+      "kind": "region",
+      "tick_count": 6,
+      "labels": [
+        "高斯局部斑（左半区）",
+        "高斯局部斑（右半区）",
+        "平滑非均匀场（左半区）",
+        "平滑非均匀场（右半区）",
+        "斜向阶跃（左半区）",
+        "斜向阶跃（右半区）"
+      ]
+    },
+    {
+      "run": "schema2_fixture",
+      "kind": "region",
+      "tick_count": 6,
+      "labels": [
+        "高斯局部斑（左半区）",
+        "高斯局部斑（右半区）",
+        "平滑非均匀场（左半区）",
+        "平滑非均匀场（右半区）",
+        "斜向阶跃（左半区）",
+        "斜向阶跃（右半区）"
+      ]
+    },
+    {
+      "run": "schema2_fixture",
+      "kind": "region",
+      "tick_count": 6,
+      "labels": [
+        "高斯局部斑（左半区）",
+        "高斯局部斑（右半区）",
+        "平滑非均匀场（左半区）",
+        "平滑非均匀场（右半区）",
+        "斜向阶跃（左半区）",
+        "斜向阶跃（右半区）"
+      ]
+    },
+    {
+      "run": "schema1_formal",
+      "kind": "global",
+      "tick_count": 6,
+      "labels": [
+        "静态",
+        "全局423.7 Hz",
+        "保护带内11.4 Hz",
+        "保护带外13.4 Hz",
+        "同频10 Hz",
+        "左半图423.7 Hz"
+      ]
+    },
+    {
+      "run": "schema1_formal",
+      "kind": "global",
+      "tick_count": 6,
+      "labels": [
+        "静态",
+        "全局423.7 Hz",
+        "保护带内11.4 Hz",
+        "保护带外13.4 Hz",
+        "同频10 Hz",
+        "左半图423.7 Hz"
+      ]
+    },
+    {
+      "run": "schema1_formal",
+      "kind": "global",
+      "tick_count": 6,
+      "labels": [
+        "静态",
+        "全局423.7 Hz",
+        "保护带内11.4 Hz",
+        "保护带外13.4 Hz",
+        "同频10 Hz",
+        "左半图423.7 Hz"
+      ]
+    },
+    {
+      "run": "schema1_formal",
+      "kind": "region",
+      "tick_count": 2,
+      "labels": [
+        "左半图423.7 Hz（左半区）",
+        "左半图423.7 Hz（右半区）"
+      ]
+    },
+    {
+      "run": "schema1_formal",
+      "kind": "region",
+      "tick_count": 2,
+      "labels": [
+        "左半图423.7 Hz（左半区）",
+        "左半图423.7 Hz（右半区）"
+      ]
+    },
+    {
+      "run": "schema1_formal",
+      "kind": "region",
+      "tick_count": 2,
+      "labels": [
+        "左半图423.7 Hz（左半区）",
+        "左半图423.7 Hz（右半区）"
+      ]
+    }
+  ],
+  "input_checks": [
+    [
+      {
+        "run": "schema1_fixture",
+        "unchanged": true,
+        "sha256": "c3bf5d11d58ce2344d040dc50b1e100c1bf8cd7b142f3c240681944ef986a10d"
+      },
+      {
+        "run": "schema1_fixture",
+        "unchanged": true,
+        "sha256": "475bc82b02596c288a68f05d98e4ea03fc63b704b46419ed19548da2d0e01a7a"
+      },
+      {
+        "run": "schema1_fixture",
+        "unchanged": true,
+        "sha256": "4719ad1141785fa035fcfb5df7cb438c1f5bef1bf453cdfaa8d36a1c1bdb5096"
+      },
+      {
+        "run": "schema1_fixture",
+        "unchanged": true,
+        "sha256": "3924ef9d7a94ed0b1286369a3a5eb909fbee35fbbc10d1529a291ed808095a59"
+      }
+    ],
+    [
+      {
+        "run": "schema2_fixture",
+        "unchanged": true,
+        "sha256": "99fd1a9fb39bf9def530fb41318d18511582e8465340e5cb0a569f586261be22"
+      },
+      {
+        "run": "schema2_fixture",
+        "unchanged": true,
+        "sha256": "f7e817df3828ae9db928536fb18d467244ef8541ae11680e60a3d79af5681197"
+      },
+      {
+        "run": "schema2_fixture",
+        "unchanged": true,
+        "sha256": "4cac89450e04b230b27e44d93fa78b6e737cb1d99346206716a061ac39b21df8"
+      },
+      {
+        "run": "schema2_fixture",
+        "unchanged": true,
+        "sha256": "a7ca3428217d41ec6d1f66b4541b29b36fe225ea0bca2707b8578972daff1e9e"
+      }
+    ],
+    [
+      {
+        "run": "schema1_formal",
+        "unchanged": true,
+        "sha256": "1e62a312e887de3b9b88bab7a33b18ec1e9e68099b365e2c36647c2e5a7210fe"
+      },
+      {
+        "run": "schema1_formal",
+        "unchanged": true,
+        "sha256": "ba880fdebfcb13fd83600577df6d69208e78a57a44a3496ced5844c67d207641"
+      },
+      {
+        "run": "schema1_formal",
+        "unchanged": true,
+        "sha256": "64e96bb4007a09db5f5701bd8d183e5a9a7eb0e16ccc08f452033a8a9f5a0803"
+      },
+      {
+        "run": "schema1_formal",
+        "unchanged": true,
+        "sha256": "3dcd4d2bbe9147f6fb17812cc256859ecc9763707ca0cb54b88529dd8ecd6c80"
+      }
+    ]
+  ],
+  "plot_records": [
+    {
+      "schema_version": 1,
+      "fixture": true,
+      "summary_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\targeted_statistics_fixture",
+      "image_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema1",
+      "summary_rows": 108,
+      "pairwise_rows": 90,
+      "protocol_sha256": "4719ad1141785fa035fcfb5df7cb438c1f5bef1bf453cdfaa8d36a1c1bdb5096",
+      "summary_sha256": "c3bf5d11d58ce2344d040dc50b1e100c1bf8cd7b142f3c240681944ef986a10d",
+      "pairwise_sha256": "475bc82b02596c288a68f05d98e4ea03fc63b704b46419ed19548da2d0e01a7a",
+      "helper_sha256": "deddbfc83e08680531d4bb45e3ff6184303bf0cadb6bb1e4408953beecc4de13",
+      "matlab_version": "24.2.0.2712019 (R2024b)",
+      "generated_at": "2026-11-06 05:01:39 *",
+      "bootstrap_replicates": 2000,
+      "missing_diameter_points": 3,
+      "finite_diameter_without_ci": 3,
+      "zero_global_illumination_rows": 18,
+      "artifacts": [
+        {
+          "stem": "fixture_schema1_diameter_error",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema1\\fixture_schema1_diameter_error.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema1\\fixture_schema1_diameter_error.pdf",
+          "log_axis": false,
+          "display_floor_pct": null
+        },
+        {
+          "stem": "fixture_schema1_illumination_global",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema1\\fixture_schema1_illumination_global.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema1\\fixture_schema1_illumination_global.pdf",
+          "log_axis": false,
+          "display_floor_pct": null
+        },
+        {
+          "stem": "fixture_schema1_illumination_regions",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema1\\fixture_schema1_illumination_regions.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema1\\fixture_schema1_illumination_regions.pdf",
+          "log_axis": false,
+          "display_floor_pct": null
+        }
+      ],
+      "interpretation": "CSV-only exploratory plots; no automatic performance or acceptance conclusion"
+    },
+    {
+      "schema_version": 2,
+      "fixture": true,
+      "summary_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\candidate_statistics_fixture",
+      "image_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema2",
+      "summary_rows": 72,
+      "pairwise_rows": 54,
+      "protocol_sha256": "4cac89450e04b230b27e44d93fa78b6e737cb1d99346206716a061ac39b21df8",
+      "summary_sha256": "99fd1a9fb39bf9def530fb41318d18511582e8465340e5cb0a569f586261be22",
+      "pairwise_sha256": "f7e817df3828ae9db928536fb18d467244ef8541ae11680e60a3d79af5681197",
+      "helper_sha256": "deddbfc83e08680531d4bb45e3ff6184303bf0cadb6bb1e4408953beecc4de13",
+      "matlab_version": "24.2.0.2712019 (R2024b)",
+      "generated_at": "2026-11-06 05:01:53 *",
+      "bootstrap_replicates": 2000,
+      "missing_diameter_points": 3,
+      "finite_diameter_without_ci": 3,
+      "zero_global_illumination_rows": 12,
+      "artifacts": [
+        {
+          "stem": "fixture_schema2_diameter_error",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema2\\fixture_schema2_diameter_error.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema2\\fixture_schema2_diameter_error.pdf",
+          "log_axis": false,
+          "display_floor_pct": null
+        },
+        {
+          "stem": "fixture_schema2_illumination_global",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema2\\fixture_schema2_illumination_global.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema2\\fixture_schema2_illumination_global.pdf",
+          "log_axis": false,
+          "display_floor_pct": null
+        },
+        {
+          "stem": "fixture_schema2_illumination_regions",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema2\\fixture_schema2_illumination_regions.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema2\\fixture_schema2_illumination_regions.pdf",
+          "log_axis": false,
+          "display_floor_pct": null
+        },
+        {
+          "stem": "fixture_schema2_spatial_acceptance",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema2\\fixture_schema2_spatial_acceptance.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_label_regression\\fixture_schema2\\fixture_schema2_spatial_acceptance.pdf",
+          "log_axis": false,
+          "display_floor_pct": null
+        }
+      ],
+      "interpretation": "CSV-only exploratory plots; no automatic performance or acceptance conclusion"
+    },
+    {
+      "schema_version": 1,
+      "fixture": false,
+      "summary_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\targeted_ablation_results_v2",
+      "image_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted",
+      "summary_rows": 108,
+      "pairwise_rows": 90,
+      "protocol_sha256": "64e96bb4007a09db5f5701bd8d183e5a9a7eb0e16ccc08f452033a8a9f5a0803",
+      "summary_sha256": "1e62a312e887de3b9b88bab7a33b18ec1e9e68099b365e2c36647c2e5a7210fe",
+      "pairwise_sha256": "ba880fdebfcb13fd83600577df6d69208e78a57a44a3496ced5844c67d207641",
+      "helper_sha256": "deddbfc83e08680531d4bb45e3ff6184303bf0cadb6bb1e4408953beecc4de13",
+      "matlab_version": "24.2.0.2712019 (R2024b)",
+      "generated_at": "2026-11-06 05:02:05 *",
+      "bootstrap_replicates": 2000,
+      "missing_diameter_points": 0,
+      "finite_diameter_without_ci": 0,
+      "zero_global_illumination_rows": 15,
+      "artifacts": [
+        {
+          "stem": "schema1_diameter_error",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_diameter_error.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_diameter_error.pdf",
+          "log_axis": false,
+          "display_floor_pct": null
+        },
+        {
+          "stem": "schema1_illumination_global",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_illumination_global.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_illumination_global.pdf",
+          "log_axis": true,
+          "display_floor_pct": 9.9999999999999991E-6
+        },
+        {
+          "stem": "schema1_illumination_regions",
+          "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_illumination_regions.png",
+          "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_illumination_regions.pdf",
+          "log_axis": false,
+          "display_floor_pct": null
+        }
+      ],
+      "interpretation": "CSV-only exploratory plots; no automatic performance or acceptance conclusion"
+    }
+  ],
+  "prior_formal_provenance": {
+    "schema_version": 1,
+    "fixture": false,
+    "summary_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\targeted_ablation_results_v2",
+    "image_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted",
+    "summary_rows": 108,
+    "pairwise_rows": 90,
+    "protocol_sha256": "64e96bb4007a09db5f5701bd8d183e5a9a7eb0e16ccc08f452033a8a9f5a0803",
+    "summary_sha256": "1e62a312e887de3b9b88bab7a33b18ec1e9e68099b365e2c36647c2e5a7210fe",
+    "pairwise_sha256": "ba880fdebfcb13fd83600577df6d69208e78a57a44a3496ced5844c67d207641",
+    "helper_sha256": "deddbfc83e08680531d4bb45e3ff6184303bf0cadb6bb1e4408953beecc4de13",
+    "matlab_version": "24.2.0.2712019 (R2024b)",
+    "generated_at": "2026-11-06 05:00:47 *",
+    "bootstrap_replicates": 2000,
+    "missing_diameter_points": 0,
+    "finite_diameter_without_ci": 0,
+    "zero_global_illumination_rows": 15,
+    "artifacts": [
+      {
+        "stem": "schema1_diameter_error",
+        "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_diameter_error.png",
+        "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_diameter_error.pdf",
+        "log_axis": false,
+        "display_floor_pct": []
+      },
+      {
+        "stem": "schema1_illumination_global",
+        "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_illumination_global.png",
+        "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_illumination_global.pdf",
+        "log_axis": true,
+        "display_floor_pct": 9.9999999999999991E-6
+      },
+      {
+        "stem": "schema1_illumination_regions",
+        "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_illumination_regions.png",
+        "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\targeted\\schema1_illumination_regions.pdf",
+        "log_axis": false,
+        "display_floor_pct": []
+      }
+    ],
+    "interpretation": "CSV-only exploratory plots; no automatic performance or acceptance conclusion"
+  }
+}

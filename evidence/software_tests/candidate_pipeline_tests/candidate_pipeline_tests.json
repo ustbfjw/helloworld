@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "frames": 1000,
+  "n_tracks": 1,
+  "spatial_internal_external_equal": true,
+  "fallback_production_equal": true,
+  "scope": "software equivalence fixture only; post-ADC gain is not formal physical illumination"
+}

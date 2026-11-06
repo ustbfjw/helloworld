@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "fixture": false,
+  "summary_directory": "C:/Users/PC/Documents/Codex/2026-11-05/c-users-pc-desktop-inta-magnetic/work/candidate_validation_results",
+  "image_directory": "C:/Users/PC/Documents/Codex/2026-11-05/c-users-pc-desktop-inta-magnetic/work/research_release_assets/figures/candidate",
+  "summary_rows": 72,
+  "pairwise_rows": 54,
+  "protocol_sha256": "01ec0fb950feda2e341cca77ba1eec9114dec02beb7496ae8d9ba124768e3769",
+  "summary_sha256": "71b24d06d975c1d0ddd1a775600c7c03dd7abff9f78d3d639d562b7000cea5fc",
+  "pairwise_sha256": "39f080ffcbbf60aabb6a81cd0a79e6ed27c50f3831cbcf57eeb60c230f6cca3d",
+  "helper_sha256": "deddbfc83e08680531d4bb45e3ff6184303bf0cadb6bb1e4408953beecc4de13",
+  "matlab_version": "24.2.0.2712019 (R2024b)",
+  "generated_at": "2026-11-06 06:28:35 *",
+  "bootstrap_replicates": 2000,
+  "missing_diameter_points": 0,
+  "finite_diameter_without_ci": 0,
+  "zero_global_illumination_rows": 9,
+  "artifacts": [
+    {
+      "stem": "schema2_diameter_error",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\candidate\\schema2_diameter_error.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\candidate\\schema2_diameter_error.pdf",
+      "log_axis": false,
+      "display_floor_pct": null
+    },
+    {
+      "stem": "schema2_illumination_global",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\candidate\\schema2_illumination_global.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\candidate\\schema2_illumination_global.pdf",
+      "log_axis": true,
+      "display_floor_pct": 0.0001
+    },
+    {
+      "stem": "schema2_illumination_regions",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\candidate\\schema2_illumination_regions.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\candidate\\schema2_illumination_regions.pdf",
+      "log_axis": false,
+      "display_floor_pct": null
+    },
+    {
+      "stem": "schema2_spatial_acceptance",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\candidate\\schema2_spatial_acceptance.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\research_release_assets\\figures\\candidate\\schema2_spatial_acceptance.pdf",
+      "log_axis": false,
+      "display_floor_pct": null
+    }
+  ],
+  "interpretation": "CSV-only exploratory plots; no automatic performance or acceptance conclusion"
+}

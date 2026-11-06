@@ -1,0 +1,13 @@
+PASS test_targeted_gain_metrics: analytic/global/local/nonbinary/scale/static checks; 27 invalid inputs.
+                                   scope: 'Illumination metric correctness only, not estimator or sizing acceptance'
+                  global_uncorrected_rms: 0.0566
+           global_perfect_correction_rms: 0
+                      local_baseline_rms: 0.0400
+              local_right_artificial_rms: 0.0283
+    nonbinary_weighted_matches_pixelwise: 1
+           constant_gain_scale_invariant: 1
+             temporal_mean_normalization: 1
+             static_baseline_strict_zero: 1
+                 invalid_inputs_rejected: 27
+                                    pass: 1
+

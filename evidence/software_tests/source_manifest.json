@@ -1,0 +1,384 @@
+{
+  "created_local": "2026-11-06T04:05:50+08:00",
+  "scope": "Copied existing software/mechanism test records and postprocessing helpers only; no formal result or scientific performance claim.",
+  "files": [
+    {
+      "source_workspace_relative": "work/postprocess/plot_study_summary.m",
+      "asset_relative": "postprocess/plot_study_summary.m",
+      "bytes": 22713,
+      "sha256": "deddbfc83e08680531d4bb45e3ff6184303bf0cadb6bb1e4408953beecc4de13"
+    },
+    {
+      "source_workspace_relative": "work/postprocess/create_candidate_examples.m",
+      "asset_relative": "postprocess/create_candidate_examples.m",
+      "bytes": 16413,
+      "sha256": "07011c61de2b4311aeddc288900f82239624a97053748cd798df419cc0fd37f5"
+    },
+    {
+      "source_workspace_relative": "work/audit_formal_results.py",
+      "asset_relative": "postprocess/audit_formal_results.py",
+      "bytes": 18154,
+      "sha256": "5c02d12defc5cfba5d2cb465479d124bf9c1acf9a557f715829d24ed9fa9474f"
+    },
+    {
+      "source_workspace_relative": "work/targeted_renderer_tests/targeted_renderer_tests.json",
+      "asset_relative": "software_tests/targeted_renderer/targeted_renderer_tests.json",
+      "bytes": 538,
+      "sha256": "453677c909866ae8545ccdda81286df2b63a7768e9378d42e45a6e78592be9b0"
+    },
+    {
+      "source_workspace_relative": "work/targeted_renderer_tests/targeted_gain_metrics_tests.json",
+      "asset_relative": "software_tests/targeted_renderer/targeted_gain_metrics_tests.json",
+      "bytes": 491,
+      "sha256": "3aed7b4eb6c80cdd451251ea41ebca83c1c4ecbdbd651358405297559ec317d2"
+    },
+    {
+      "source_workspace_relative": "work/targeted_renderer_tests.log",
+      "asset_relative": "software_tests/targeted_renderer/targeted_renderer_tests.log",
+      "bytes": 1143,
+      "sha256": "bd9cd02ffd12846704513f1b63aa65c76e1f02a9b06d003a7816d42be05fbfa6"
+    },
+    {
+      "source_workspace_relative": "work/targeted_gain_metrics_tests.log",
+      "asset_relative": "software_tests/targeted_renderer/targeted_gain_metrics_tests.log",
+      "bytes": 679,
+      "sha256": "98da4ad56acac2049a7a68453ed857bf90ec0548faaccd3e5ca6ca68a5d4ea65"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_unit_tests/common_illumination_tests.json",
+      "asset_relative": "software_tests/targeted_ablation/common_illumination_tests.json",
+      "bytes": 972,
+      "sha256": "af66f4608987d0d09680db1387614f89a2bcfd60b907160503adfadfca2f0752"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_unit_tests/targeted_ablations_tests.json",
+      "asset_relative": "software_tests/targeted_ablation/targeted_ablations_tests.json",
+      "bytes": 10453,
+      "sha256": "61ec40e86295c3c9547bcac297c5ab77f5b223d4b02371b31568ef0ee0e1490c"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_unit_tests/code_analyzer.json",
+      "asset_relative": "software_tests/targeted_ablation/code_analyzer.json",
+      "bytes": 136,
+      "sha256": "e53f9d2423c0ece1622a976c541bcb3355c9e5202c3f7ad85e16805209f4b327"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_unit_tests/matlab_unit_tests.log",
+      "asset_relative": "software_tests/targeted_ablation/matlab_unit_tests.log",
+      "bytes": 4307,
+      "sha256": "92d2b613ac8b2b4553ff69aaf408f892cc946153328ab88c4e94d3e69f10ed3c"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_unit_tests/unit_test_results.mat",
+      "asset_relative": "software_tests/targeted_ablation/unit_test_results.mat",
+      "bytes": 2836,
+      "sha256": "1bcaf048f8f59d45bcebd2a0a273e25d159cea3a338e121f03a49bda7ea4ee5f"
+    },
+    {
+      "source_workspace_relative": "work/targeted_pipeline_tests/targeted_pipeline_tests.json",
+      "asset_relative": "software_tests/targeted_pipeline_tests/targeted_pipeline_tests.json",
+      "bytes": 249,
+      "sha256": "680fa1029a7069dcc9c555596210e9f24e0049e13a9041bf07681b1ffde73ef7"
+    },
+    {
+      "source_workspace_relative": "work/targeted_pipeline_tests.log",
+      "asset_relative": "software_tests/targeted_pipeline_tests/targeted_pipeline_tests.log",
+      "bytes": 329,
+      "sha256": "0c01934341d89f471f98168461a877a45302a118b38eba2d7d2f7622b5d55493"
+    },
+    {
+      "source_workspace_relative": "work/candidate_renderer_tests/candidate_renderer_tests.json",
+      "asset_relative": "software_tests/candidate_renderer_tests/candidate_renderer_tests.json",
+      "bytes": 605,
+      "sha256": "589e4f0ac9f1ca5b9d0bcbe4f05f4fa6980d79dc39369960b8294df73b9c78d4"
+    },
+    {
+      "source_workspace_relative": "work/candidate_renderer_tests.log",
+      "asset_relative": "software_tests/candidate_renderer_tests/candidate_renderer_tests.log",
+      "bytes": 1199,
+      "sha256": "4062b3796d6ef50cb6acf4c3c537fe7313dbe77c170c8cb3ec215a35ce569155"
+    },
+    {
+      "source_workspace_relative": "work/candidate_application_tests/candidate_application_tests.json",
+      "asset_relative": "software_tests/candidate_application_tests/candidate_application_tests.json",
+      "bytes": 514,
+      "sha256": "d15dc1f84a00e1a9b6b757268a4b812419bdef7c7cccd63a26b120c37997ea3f"
+    },
+    {
+      "source_workspace_relative": "work/candidate_application_tests.log",
+      "asset_relative": "software_tests/candidate_application_tests/candidate_application_tests.log",
+      "bytes": 757,
+      "sha256": "62014c09e9c523ecf7460daf419eacf90bf77291ee03df503b2c5acaf7facd7b"
+    },
+    {
+      "source_workspace_relative": "work/candidate_pipeline_tests/candidate_pipeline_tests.json",
+      "asset_relative": "software_tests/candidate_pipeline_tests/candidate_pipeline_tests.json",
+      "bytes": 234,
+      "sha256": "f144392d70815ee6b3117f0a0bce8fd3b66b786b5b00481a9408595cf3237d5c"
+    },
+    {
+      "source_workspace_relative": "work/candidate_pipeline_tests.log",
+      "asset_relative": "software_tests/candidate_pipeline_tests/candidate_pipeline_tests.log",
+      "bytes": 323,
+      "sha256": "e757175af955e6f7178d0f9e147eeb8c95382c99189fc379e8259a9ef95df608"
+    },
+    {
+      "source_workspace_relative": "work/spatial_candidate_unit_tests/validated_spatial_illumination_tests.json",
+      "asset_relative": "software_tests/spatial_candidate/validated_spatial_illumination_tests.json",
+      "bytes": 1398,
+      "sha256": "6d8ddedbacbe34b969cc4eeb52510de5b7ebbec25c635044226fcaed14f9d737"
+    },
+    {
+      "source_workspace_relative": "work/spatial_candidate_unit_tests/code_analyzer.json",
+      "asset_relative": "software_tests/spatial_candidate/code_analyzer.json",
+      "bytes": 159,
+      "sha256": "a6c1646c7731120f7e7d7bfa94de67ee2fe5b398d0836013748acb2a68529a5d"
+    },
+    {
+      "source_workspace_relative": "work/spatial_candidate_unit_tests/matlab_unit_tests.log",
+      "asset_relative": "software_tests/spatial_candidate/matlab_unit_tests.log",
+      "bytes": 841,
+      "sha256": "1efdd6c3180687b64fcf3637f4ef94964824adb0dc95fa614243d951db857b0c"
+    },
+    {
+      "source_workspace_relative": "work/targeted_runner_fixture/runner_test_record.json",
+      "asset_relative": "software_tests/targeted_runner/runner_test_record.json",
+      "bytes": 189,
+      "sha256": "c408d13c56dad7d8a2199ec00aeea2b7f86d5c74af3a570a28844c8e242ae5fd"
+    },
+    {
+      "source_workspace_relative": "work/targeted_runner_fixture/protocol.json",
+      "asset_relative": "software_tests/targeted_runner/protocol.json",
+      "bytes": 11635,
+      "sha256": "aed88acd61afdb9af6c6d1468d6cbadd9050a3a30ce3cd5405f969d1056d4984"
+    },
+    {
+      "source_workspace_relative": "work/targeted_runner_fixture/protocol.sha256",
+      "asset_relative": "software_tests/targeted_runner/protocol.sha256",
+      "bytes": 65,
+      "sha256": "42ece56f9f3ca6d4f996f1f49eaee286656eae7d9458e1fbc572eb2211d6ecce"
+    },
+    {
+      "source_workspace_relative": "work/targeted_runner_fixture/parameters.mat",
+      "asset_relative": "software_tests/targeted_runner/parameters.mat",
+      "bytes": 4753,
+      "sha256": "094ba236b034077ce8eb8883b0904bfb68923ccd6764966443c094cda475295b"
+    },
+    {
+      "source_workspace_relative": "work/targeted_runner_fixture.log",
+      "asset_relative": "software_tests/targeted_runner/targeted_runner_fixture.log",
+      "bytes": 9891,
+      "sha256": "e28ec4ee54fab90b431c717c6dbc3094dc007a8774be78dcbb6e6e33795717ea"
+    },
+    {
+      "source_workspace_relative": "work/candidate_runner_fixture_final/candidate_runner_test_record.json",
+      "asset_relative": "software_tests/candidate_runner/candidate_runner_test_record.json",
+      "bytes": 189,
+      "sha256": "f8acf57fa75cd445367a116f5582d753e827559dd5474e90418d550f9dcd97e7"
+    },
+    {
+      "source_workspace_relative": "work/candidate_runner_fixture_final/protocol.json",
+      "asset_relative": "software_tests/candidate_runner/protocol.json",
+      "bytes": 14581,
+      "sha256": "d9efc239f81504c4f55caefa19a38aec49f6debc49085ed1ea3314c230434318"
+    },
+    {
+      "source_workspace_relative": "work/candidate_runner_fixture_final/protocol.sha256",
+      "asset_relative": "software_tests/candidate_runner/protocol.sha256",
+      "bytes": 65,
+      "sha256": "e1c73ba77327476c010ab3c6c932dc8133c6c9114ed5fb343851e83503719a4d"
+    },
+    {
+      "source_workspace_relative": "work/candidate_runner_fixture_final/parameters.mat",
+      "asset_relative": "software_tests/candidate_runner/parameters.mat",
+      "bytes": 4751,
+      "sha256": "f830ba551c6ac7a91215f40391b6aa90dc206182e4ab3a95e7112ca1278e0dfd"
+    },
+    {
+      "source_workspace_relative": "work/candidate_runner_fixture_final.log",
+      "asset_relative": "software_tests/candidate_runner/candidate_runner_fixture_final.log",
+      "bytes": 6828,
+      "sha256": "bfd244ac5fee72b806967e1ba00fca1eb0a080eead19c40e1f6b46ba476cd2fa"
+    },
+    {
+      "source_workspace_relative": "work/targeted_statistics_fixture/test_record.json",
+      "asset_relative": "software_tests/statistics/targeted/test_record.json",
+      "bytes": 437,
+      "sha256": "33304b4ec3246587944c5bf5a2dfb2d38677a307072b195934169658d26a1136"
+    },
+    {
+      "source_workspace_relative": "work/candidate_statistics_fixture/test_record.json",
+      "asset_relative": "software_tests/statistics/candidate/test_record.json",
+      "bytes": 580,
+      "sha256": "0ca18a931bc4246fd9a2b52552e2a8271b19bafdce8af099edafee418386cb43"
+    },
+    {
+      "source_workspace_relative": "work/candidate_plot_tests.log",
+      "asset_relative": "software_tests/plotting/candidate_plot_tests.log",
+      "bytes": 119,
+      "sha256": "948045d1f99d4e1748d8c68f0b0e9265c4f472b58340cd8b2b54c9af3e2c0ad7"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_plot_fixture_run.log",
+      "asset_relative": "software_tests/plotting/postprocess_plot_fixture_run.log",
+      "bytes": 239,
+      "sha256": "14dcfc8e6406bd750ee82e8b5eea8440031f1c1cd046d36a6822394b0f024dc2"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_plot_fixture_final_layout.log",
+      "asset_relative": "software_tests/plotting/postprocess_plot_fixture_final_layout.log",
+      "bytes": 93,
+      "sha256": "fb4624bc955f32a9ee2b8059b8ee2a19445a00174cf00bb8ce7926cfdf731fb8"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_plot_fixture/selftest.json",
+      "asset_relative": "software_tests/plotting/postprocess_selftest.json",
+      "bytes": 253,
+      "sha256": "3fb963e6336083cc70d4ffad4dd18bfdd0c4ecbcc438db789a37c4c24f4a45f9"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_plot_fixture/schema1/fixture_schema1_plot_provenance.json",
+      "asset_relative": "software_tests/plotting/schema1/fixture_schema1_plot_provenance.json",
+      "bytes": 2488,
+      "sha256": "b8d9c90e9d8d91ffc3bb4ab572bddd4154b75b951ddf9dfed5d76b619d693d81"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_plot_fixture/schema2/fixture_schema2_plot_provenance.json",
+      "asset_relative": "software_tests/plotting/schema2/fixture_schema2_plot_provenance.json",
+      "bytes": 2960,
+      "sha256": "6e582f6c85de7d927b6789bba27d09b714deab767314cc96d70217e73c461656"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_plot_fixture/log_zero/fixture_schema1_plot_provenance.json",
+      "asset_relative": "software_tests/plotting/log_zero/fixture_schema1_plot_provenance.json",
+      "bytes": 2509,
+      "sha256": "4a4d248a95a5276a27d68157c54b7add0a8c20c7e3cfe225cd586a573c23d184"
+    },
+    {
+      "source_workspace_relative": "work/paired_velocity_unit_tests/paired_velocity_tests.json",
+      "asset_relative": "software_tests/paired_velocity/paired_velocity_tests.json",
+      "bytes": 341,
+      "sha256": "18ed6ef3d9bf4ef66204765330f458b40c778ffd4345220cf7661b9d333ad270"
+    },
+    {
+      "source_workspace_relative": "work/audit_python_selftest.json",
+      "asset_relative": "software_tests/independent_python/audit_python_selftest.json",
+      "bytes": 551,
+      "sha256": "941ecf06ddd8d0583957a3a9e93bf2ef8d389d6bbe59f64859216e6b2d72c23f"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_examples_guard_record.json",
+      "asset_relative": "software_tests/example_reproduction/guard_record.json",
+      "bytes": 346,
+      "sha256": "50a3a90539eea12a6d61278a09408038558bdd8e6e1ace83585ef7835528652a"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_examples_fixture/example_manifest.json",
+      "asset_relative": "software_tests/example_reproduction/fixture_example_manifest.json",
+      "bytes": 53870,
+      "sha256": "4af06e37f3ae2f5766d5983a00b0aa25bb64b250ea42e82f41f0d1a71f747383"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/mono100/run.log",
+      "asset_relative": "software_tests/failed_initial_attempt/mono100/run.log",
+      "bytes": 55,
+      "sha256": "c517db00291220b3bda33e62d7f4fe8beebaba863f65cbbf5c4b381dec3c5168"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/mono200/run.log",
+      "asset_relative": "software_tests/failed_initial_attempt/mono200/run.log",
+      "bytes": 55,
+      "sha256": "8ffb20b1df9c6396fe2b4aab7c8b888e0cad2d525049650c36b028365824e83b"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/mono30/run.log",
+      "asset_relative": "software_tests/failed_initial_attempt/mono30/run.log",
+      "bytes": 54,
+      "sha256": "ca20f9a82b307f8fcc2cf3050b6e29229cee7ea54376d094bee795f2b15c14c5"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/parameters.mat",
+      "asset_relative": "software_tests/failed_initial_attempt/parameters.mat",
+      "bytes": 4669,
+      "sha256": "961a6e4948641a6542f93b09b9061a64b57062fa7c087819699d7ea5e03ba019"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/protocol.json",
+      "asset_relative": "software_tests/failed_initial_attempt/protocol.json",
+      "bytes": 11507,
+      "sha256": "981af260b47d1a048063631613a1b7cde6b2386cf60b19536bfdb83a795cf17d"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/protocol.sha256",
+      "asset_relative": "software_tests/failed_initial_attempt/protocol.sha256",
+      "bytes": 65,
+      "sha256": "d50c6130685a40fbda30ac2caa55ff6b01f38603e30beb6962debe715f689254"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/run_targeted_ablation_failed_v1.m.txt",
+      "asset_relative": "software_tests/failed_initial_attempt/run_targeted_ablation_failed_v1.m.txt",
+      "bytes": 7638,
+      "sha256": "b5d98ebae8741d1625ba1ac6d12294cfeccee65d11e365ff4152f2c404fb3d5a"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/targeted_mono100.log",
+      "asset_relative": "software_tests/failed_initial_attempt/targeted_mono100.log",
+      "bytes": 298,
+      "sha256": "1a6570be47e10f1dcc17ab37bc6561a18e36e8bbc099692c63c51d6a9e62af48"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/targeted_mono200.log",
+      "asset_relative": "software_tests/failed_initial_attempt/targeted_mono200.log",
+      "bytes": 298,
+      "sha256": "8fbaf56568a47574e4d71fbe50c5afb77bfa155eebb93a1957e540a473d816c9"
+    },
+    {
+      "source_workspace_relative": "work/targeted_ablation_results/targeted_mono30.log",
+      "asset_relative": "software_tests/failed_initial_attempt/targeted_mono30.log",
+      "bytes": 297,
+      "sha256": "d66d63710c4dfbf4c03303d8a825e34f78d38a83cd59dd8447c8678633c1ca9c"
+    },
+    {
+      "source_workspace_relative": "work/targeted_prepare.log",
+      "asset_relative": "software_tests/failed_initial_attempt/prepare_console.log",
+      "bytes": 121,
+      "sha256": "280f661b8fd4dc91e0578ebcfa46d81e13244189a51382c0949fdcf91bb716b9"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_label_regression/test_plot_region_labels.m",
+      "asset_relative": "software_tests/plotting/region_label_regression/test_plot_region_labels.m",
+      "bytes": 5374,
+      "sha256": "3cff3a324a24e24d9f53c8262d2e9702326d493357ef338a94d7faab7a51c1db"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_label_regression/region_label_regression.json",
+      "asset_relative": "software_tests/plotting/region_label_regression/region_label_regression.json",
+      "bytes": 18554,
+      "sha256": "6b068e1870ac94bad315c6c236f59fb1e815a5a161faebf179bbf2141586694f"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_label_regression/matlab_region_label_regression_final.log",
+      "asset_relative": "software_tests/plotting/region_label_regression/matlab_region_label_regression_final.log",
+      "bytes": 484,
+      "sha256": "7984c4b09a207fe02ca7d0bd1ee0d10e1d1f381e615cba11e493c4f014c3d571"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_label_regression/initial_attempt_record.json",
+      "asset_relative": "software_tests/plotting/region_label_regression/initial_attempt_record.json",
+      "bytes": 18536,
+      "sha256": "4d763d2363c7c80d29a4f7f872c68d7be0706652b22d35c103ec0b172ba8963a"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_label_regression/initial_attempt_matlab.log",
+      "asset_relative": "software_tests/plotting/region_label_regression/initial_attempt_matlab.log",
+      "bytes": 893,
+      "sha256": "53ab35618d130e6cfc9ca9e3bbde40dc823ece39e87f370685c748d7c6e00ef7"
+    },
+    {
+      "source_workspace_relative": "work/postprocess_label_regression/label_fix_record.json",
+      "asset_relative": "software_tests/plotting/region_label_regression/label_fix_record.json",
+      "bytes": 2493,
+      "sha256": "cb4a806d246f40407a070be4e4489f5b99954cefd4569a4af823c0e232e4f3d1"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "Application and post-inference metrics only; no sizing acceptance",
+  "frames": 235,
+  "block_frames": 100,
+  "global_single_exact": true,
+  "identity_exact": true,
+  "spatial_single_matrix_exact": true,
+  "multifrequency_basis": true,
+  "maximum_metric_error": 1.4051260155412137E-15,
+  "global_metric_exact": true,
+  "near_perfect_rms": 2.7623505324977141E-8,
+  "near_zero_numerical_tolerance": 1E-7,
+  "static_zero": true,
+  "invalid_inputs_rejected": 38,
+  "rng_unchanged": true,
+  "pass": true
+}

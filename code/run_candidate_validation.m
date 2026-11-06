@@ -1,0 +1,142 @@
+function run_candidate_validation(group,outdir)
+%RUN_CANDIDATE_VALIDATION 空间留出校正候选的独立保留验收。
+% group为prepare、mono30、mono100、mono200、summarize或all。
+% 每组20/60/60段×5000帧，6种照明×4种方法。参数/代码先冻结，允许续跑。
+root=fileparts(mfilename('fullpath')); setup_paths(root);
+maxNumCompThreads(2);
+if nargin<1, group='all'; end
+if nargin<2, outdir=fullfile(root,'candidate_results'); end
+if strcmp(group,'all')
+    if ~exist(fullfile(outdir,'protocol.json'),'file'), run_candidate_validation('prepare',outdir); end
+    for name={'mono30','mono100','mono200'}, run_candidate_validation(name{1},outdir); end
+    run_candidate_validation('summarize',outdir); return;
+end
+if strcmp(group,'prepare')
+    assert(~exist(fullfile(outdir,'protocol.json'),'file'),'协议已存在；禁止覆盖，请使用新目录。');
+    if ~exist(outdir,'dir'), mkdir(outdir); end
+    protocol=candidate_experiment_protocol(); protocol.frozen_at=char(datetime('now','Format','yyyy-MM-dd HH:mm:ss Z'));
+    protocol.matlab_version=version; protocol.computer=computer;
+    [source_files,source_hashes]=source_inventory(root);
+    protocol.source_files=source_files; protocol.source_hashes=source_hashes;
+    parameters=cell(1,3);
+    for g=1:3
+        parameters{g}=apply_scenario(sim_params('full'),protocol.groups(g).name);
+        parameters{g}.sim.seed=protocol.groups(g).seed_base;
+        parameters{g}.out.make_plots=false; parameters{g}.out.save_video=false;
+        parameters{g}.out.save_diagnostics=false; parameters{g}.ana.bootstrap_n=0;
+    end
+    save(fullfile(outdir,'parameters.mat'),'parameters');
+    protocol.parameters_sha256=targeted_sha256(fullfile(outdir,'parameters.mat'));
+    write_text(fullfile(outdir,'protocol.json'),jsonencode(protocol,PrettyPrint=true));
+    write_text(fullfile(outdir,'protocol.sha256'),targeted_sha256(fullfile(outdir,'protocol.json')));
+    fprintf('协议已冻结：%s\n',outdir); return;
+end
+protocol_path=fullfile(outdir,'protocol.json');
+protocol=jsondecode(fileread(protocol_path)); protocol_hash=strtrim(fileread(fullfile(outdir,'protocol.sha256')));
+assert(strcmp(targeted_sha256(protocol_path),protocol_hash),'冻结协议被修改。');
+assert(strcmp(targeted_sha256(fullfile(outdir,'parameters.mat')),protocol.parameters_sha256),'冻结参数被修改。');
+for k=1:numel(protocol.source_files)
+    assert(strcmp(targeted_sha256(fullfile(root,protocol.source_files{k})),protocol.source_hashes{k}), ...
+        '冻结代码已变化：%s。不能混用不同版本结果。',protocol.source_files{k});
+end
+if strcmp(group,'summarize'), summarize_candidate_experiment(outdir); return; end
+g=find(strcmp({protocol.groups.name},group)); assert(isscalar(g),'未知分组。');
+frozen=load(fullfile(outdir,'parameters.mat'),'parameters'); p=frozen.parameters{g};
+assert(p.sim.n_frames==protocol.frames && p.sim.n_videos==protocol.groups(g).n_videos);
+groupdir=fullfile(outdir,group); if ~exist(groupdir,'dir'), mkdir(groupdir); end
+diary(fullfile(groupdir,'run.log')); cleanup=onCleanup(@() diary('off')); %#ok<NASGU>
+tab=ipsf_lookup_table(p); total_started=tic;
+for video_index=1:p.sim.n_videos
+    seed=p.sim.seed+protocol.seed_stride*(video_index-1);
+    path=fullfile(groupdir,sprintf('video_%03d.mat',video_index));
+    if exist(path,'file')
+        old=load(path,'protocol_hash','seed','video_index','items');
+        assert(strcmp(old.protocol_hash,protocol_hash) && old.seed==seed && old.video_index==video_index ...
+            && isequal(size(old.items),[numel(protocol.conditions),numel(protocol.methods)]),'断点结果不兼容。');
+        fprintf('%s 视频%d 已有完整兼容结果，跳过。\n',group,video_index); continue;
+    end
+    started=tic; traj=simulate_trajectories(p,seed);
+    [videos,metas]=render_candidate_conditions(traj,p,tab,protocol.conditions);
+    render_seconds=toc(started);
+    template=struct('stats',struct(),'metric',struct(),'illumination_info',struct(),'reused_from','');
+    items=repmat(template,numel(protocol.conditions),numel(protocol.methods));
+    samples=cell(numel(protocol.conditions),1);
+    fprintf('%s 视频%d/%d seed=%d，六条件渲染 %.1fs\n',group,video_index,p.sim.n_videos,seed,render_seconds);
+    for c=1:numel(protocol.conditions)
+        video=videos{c}; gains=cell(1,numel(protocol.methods)); examples=gains;
+        for m=1:numel(protocol.methods)
+            method_started=tic; method=protocol.methods{m};
+            if strcmp(method,'spatial_validated')
+                [model,info]=estimate_validated_spatial_illumination(video,p);
+            else
+                [gain,info]=targeted_method_gain(video,p,method);
+                model=struct('global_gain',gain,'spatial_coefficients',[], ...
+                    'temporal_basis',[],'is_spatial',false);
+            end
+            if model.is_spatial
+                effective_gain=[]; previous=[];
+            else
+                effective_gain=single(model.global_gain);
+                previous=find(cellfun(@(x) isequal(x,effective_gain),gains(1:m-1)),1);
+            end
+            if isempty(previous)
+                pm=p; pm.ana.background_mode='median';
+                corrected=apply_candidate_illumination(video,model);
+                [tracks,ex]=inta_track_video(corrected,pm); clear corrected
+                tracks=analyze_tracks(tracks,traj,pm,video_index);
+                res=inta_population_analysis(tracks,pm);
+                stats=targeted_sufficient_stats(tracks,res,pm); reused_from='';
+                if video_index==1, examples{m}=ex; end
+            else
+                stats=items(c,previous).stats; reused_from=protocol.methods{previous};
+                if video_index==1, examples{m}=examples{previous}; end
+            end
+            if strcmp(method,'spatial_validated') && video_index==1
+                samples{c}=examples{m}; samples{c}.illumination=info;
+                samples{c}.illumination_model=model;
+                if ~isempty(samples{c}.frame), samples{c}.raw=video(:,:,samples{c}.frame); end
+            end
+            gains{m}=effective_gain;
+            % 真值直到本方法推断完成后才读取，只用于误差评价。
+            metric=candidate_gain_metrics(model,metas{c});
+            metric.applied=info.applied; metric.saturated_pixels=metas{c}.n_sat;
+            metric.truth_velocity_um_s=mean(traj.v_mag)*1e6*norm(traj.e_g(1:2));
+            metric.seconds=toc(method_started);
+            drop={'gain','tile_traces','raw_common','frequency_axis','spectrum'};
+            info=rmfield(info,intersect(fieldnames(info),drop));
+            if isfield(info,'fallback_info')
+                info.fallback_info=rmfield(info.fallback_info,intersect(fieldnames(info.fallback_info),drop));
+            end
+            if isfield(info,'training_rms_spectrum'), info=rmfield(info,'training_rms_spectrum'); end
+            items(c,m)=struct('stats',stats,'metric',metric,'illumination_info',info,'reused_from',reused_from); %#ok<AGROW>
+            fprintf('  %s %-19s active=%d loc=%d gainRMS=%.6g reuse=%s %.1fs\n', ...
+                protocol.conditions(c).name,method,stats.n_tracks>0,stats.n_loc,metric.gain_rms,reused_from,metric.seconds);
+        end
+        clear video gains
+    end
+    elapsed_seconds=toc(started); tmp=[path '.partial'];
+    if video_index==1
+        sample_path=fullfile(groupdir,'sample.mat');
+        save([sample_path '.partial'],'samples','metas','traj','p','protocol_hash','-v7.3');
+        movefile([sample_path '.partial'],sample_path,'f');
+    end
+    save(tmp,'items','p','video_index','seed','protocol_hash','render_seconds','elapsed_seconds','-v7');
+    movefile(tmp,path);
+    fprintf('%s 完成视频%d/%d：%.1fs，组已用%.1fs\n',group,video_index,p.sim.n_videos,elapsed_seconds,toc(total_started));
+    clear videos metas traj items samples
+end
+end
+
+function [names,hashes]=source_inventory(root)
+files=dir(fullfile(root,'**','*.m')); names=cell(numel(files),1); hashes=names;
+for k=1:numel(files)
+    path=fullfile(files(k).folder,files(k).name); names{k}=strrep(path(numel(root)+2:end),'\','/');
+    hashes{k}=targeted_sha256(path);
+end
+[names,idx]=sort(names); hashes=hashes(idx);
+end
+
+function write_text(path,value)
+fid=fopen(path,'w','n','UTF-8'); assert(fid>=0); cleanup=onCleanup(@() fclose(fid)); %#ok<NASGU>
+fprintf(fid,'%s\n',value);
+end

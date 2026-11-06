@@ -1,0 +1,4 @@
+scenario,nominal_nm,baseline_diameter_nm,fused_diameter_nm,baseline_bias_percent,fused_bias_percent,fused_ci_low_nm,fused_ci_high_nm,baseline_tracks,fused_tracks,baseline_localizations,fused_localizations,baseline_active_videos,fused_active_videos,total_videos,applied_fraction,baseline_gain_rms,residual_gain_rms,rms_suppression_fraction,maximum_video_residual_gain_rms,saturated_pixels
+mono30,30,31.2712961,31.1922183,4.23765377,3.97406107,29.978822,32.3354531,154,156,18433,19549,19,19,20,1,0.0564761796,1.48624704e-05,0.999736836,1.81164638e-05,0
+mono100,100,99.9672617,100.148349,-0.032738275,0.148348659,96.9456668,103.463963,55,53,23456,23603,11,11,60,1,0.0564761796,1.89484362e-05,0.999664488,3.4155145e-05,0
+mono200,200,199.246972,199.004543,-0.376514219,-0.497728722,191.730878,206.230576,52,46,23495,23944,11,11,60,1,0.0564761796,1.73116781e-05,0.999693469,2.86582184e-05,0

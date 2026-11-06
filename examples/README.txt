@@ -1,0 +1,7 @@
+这些图和MAT是按预先说明规则选择的单视频实例，不是群体性能证据。
+三组独立选择视频，每组六条件共用同一seed和真实轨迹。
+example.mat保留生产ex、实际model/info及meta原诊断；真值仅为参考。
+raw_excerpt_display_only.mat最多201帧，is_excerpt=true，不能替代完整视频验收统计。
+无轨迹/回退/跳过状态与逐字段数值核验见example_manifest.json。
+fixture_only=0；完整帧数=5000；protocol SHA-256=01ec0fb950feda2e341cca77ba1eec9114dec02beb7496ae8d9ba124768e3769
+

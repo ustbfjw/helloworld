@@ -1,0 +1,54 @@
+{
+  "scope": "Only two region label construction lines in the independent plot helper; no frozen code or statistical data changed",
+  "generated_local": "2026-11-06T05:03:05.8016267+08:00",
+  "prior_helper_sha256": "e207f9236b61719562848f9b6ccffadfd6d5bc09168bdbf61a7132d3d24c9959",
+  "helper_sha256": "deddbfc83e08680531d4bb45e3ff6184303bf0cadb6bb1e4408953beecc4de13",
+  "prior_manifest_sha256": "1008909b7c1778729e44b213976729c690227fac508e6e1741d95d52d8f437a6",
+  "prior_assets_verified": 57,
+  "actual_matlab_exit_code": 0,
+  "actual_region_axes_checked": 9,
+  "actual_global_axes_checked": 9,
+  "formal_schema1_png_pdf_pairs_regenerated": 3,
+  "formal_inputs_sha256_unchanged": true,
+  "visual_review": "Formal schema1 region and global PNG labels inspected; schema2 fixture region labels also inspected; single-line left/right labels are readable",
+  "initial_attempt_note": "All axes assertions passed, but test callback cleanup was delayed until MATLAB shutdown and warned. Initial record/log retained; test callback was explicitly restored, then the full actual regression and formal regeneration ran again with exit 0 and no warning.",
+  "test_record": "region_label_regression.json",
+  "final_log": "matlab_region_label_regression_final.log",
+  "formal_figures": [
+    {
+      "name": "schema1_diameter_error.pdf",
+      "bytes": 56563,
+      "sha256": "61e1af33ad2f8020fb78e488b1a96c81a0d876a63513a360ae55d7ac9ea8264e"
+    },
+    {
+      "name": "schema1_diameter_error.png",
+      "bytes": 689149,
+      "sha256": "ab7d782dda4013e2121481862d5e505e82527ccd528bc809334abd82b3b55daa"
+    },
+    {
+      "name": "schema1_illumination_global.pdf",
+      "bytes": 69576,
+      "sha256": "2cf7c06cb86f7b1defd153e1c531adc8f7535e80185287c8e2b97d10ee696372"
+    },
+    {
+      "name": "schema1_illumination_global.png",
+      "bytes": 744856,
+      "sha256": "225d4508666480b5b8d6283c2f98fb3e7afc4cf0e4b28b52f2ade6514badaac6"
+    },
+    {
+      "name": "schema1_illumination_regions.pdf",
+      "bytes": 42467,
+      "sha256": "f5c27ebffff0a66f7871558e8784b070faefd17cc91e647e910c865f6645764c"
+    },
+    {
+      "name": "schema1_illumination_regions.png",
+      "bytes": 547185,
+      "sha256": "bc178eed597ff5fbcf45dfc4ea30e3943114e5d2e29483d74a9b78311a8f7def"
+    },
+    {
+      "name": "schema1_plot_provenance.json",
+      "bytes": 2497,
+      "sha256": "c6cfd2f39d70470ed3381eb6269b2fac8540949201f36ee2b2c18bb129943cb5"
+    }
+  ]
+}

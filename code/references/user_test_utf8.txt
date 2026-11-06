@@ -1,0 +1,525 @@
+clear;
+clc;
+close all;
+
+%% ================= 中文图形字体设置 =================
+%% ================= 中文图形字体设置 =================
+
+% MATLAB R2019b 可用的中文字体
+chineseFont = 'Microsoft YaHei';
+
+% 设置所有图形的默认字体
+set(groot, 'defaultAxesFontName', chineseFont);
+set(groot, 'defaultTextFontName', chineseFont);
+set(groot, 'defaultLegendFontName', chineseFont);
+set(groot, 'defaultColorbarFontName', chineseFont);
+%% ================= 用户设置 =================
+
+% BMP 图片所在文件夹
+folderPath = ...
+    'F:\拍摄结果\7.29\BMP100053022-20260729-105610';
+
+% 图片采样频率，单位：帧/秒 Hz
+Fs = 5000;
+
+% 想要提取的频率，单位：Hz
+targetFreq = 420;
+
+% 选择需要处理的图片范围
+% 例如处理排序后的第3张到第150张
+startFrame = 1000;
+endFrame   = 3000;
+
+% 如果希望一直处理到最后一张，可以设置：
+% endFrame = inf;
+
+% 处理方式
+% 'gray'：转换为灰度图后处理
+% 'rgb' ：分别处理 R、G、B 三个通道
+processMode = 'gray';
+
+% 是否生成目标频率的单频重构时间序列
+generateReconstruction = true;
+
+%% ================= 查找全部 BMP 文件 =================
+
+allFiles = dir(fullfile(folderPath, '*.bmp'));
+
+if isempty(allFiles)
+    error('指定文件夹中没有找到 BMP 图片：%s', folderPath);
+end
+
+% 根据文件名中的最后一组数字排序
+allFiles = sortBmpFiles(allFiles);
+
+totalFrames = length(allFiles);
+
+fprintf('文件夹中共找到 %d 张 BMP 图片。\n', totalFrames);
+
+%% ================= 检查并选择图片范围 =================
+
+if isinf(endFrame)
+    endFrame = totalFrames;
+end
+
+if startFrame ~= floor(startFrame) || endFrame ~= floor(endFrame)
+    error('startFrame 和 endFrame 必须是整数。');
+end
+
+if startFrame < 1 || startFrame > totalFrames
+    error('startFrame 超出范围，应位于 1 到 %d 之间。', ...
+        totalFrames);
+end
+
+if endFrame < startFrame || endFrame > totalFrames
+    error('endFrame 超出范围，应位于 %d 到 %d 之间。', ...
+        startFrame, totalFrames);
+end
+
+% 只保留用户选择的图片
+files = allFiles(startFrame:endFrame);
+
+numFrames = length(files);
+
+fprintf('本次处理第 %d 张到第 %d 张图片。\n', ...
+    startFrame, endFrame);
+
+fprintf('实际处理图片数量：%d 张。\n', numFrames);
+fprintf('第一张图片：%s\n', files(1).name);
+fprintf('最后一张图片：%s\n', files(end).name);
+
+%% ================= 读取第一张图片 =================
+
+[firstImage, map] = imread( ...
+    fullfile(folderPath, files(1).name));
+
+% 处理索引图像
+if ~isempty(map)
+    firstImage = ind2rgb(firstImage, map);
+end
+
+firstImage = im2single(firstImage);
+
+if strcmpi(processMode, 'gray')
+
+    if size(firstImage, 3) == 3
+        firstImage = ...
+            0.2989 * firstImage(:, :, 1) + ...
+            0.5870 * firstImage(:, :, 2) + ...
+            0.1140 * firstImage(:, :, 3);
+    end
+
+    height = size(firstImage, 1);
+    width  = size(firstImage, 2);
+    numChannels = 1;
+
+elseif strcmpi(processMode, 'rgb')
+
+    if size(firstImage, 3) ~= 3
+        error('输入图片不是 RGB 图片，不能使用 rgb 模式。');
+    end
+
+    height = size(firstImage, 1);
+    width  = size(firstImage, 2);
+    numChannels = 3;
+
+else
+    error('processMode 只能设置为 gray 或 rgb。');
+end
+
+fprintf('图片尺寸：%d × %d 像素。\n', width, height);
+
+%% ================= 建立四维图像数组 =================
+%
+% 数据排列方式：
+% imageStack(y, x, channel, time)
+
+imageStack = zeros( ...
+    height, width, numChannels, numFrames, 'single');
+
+imageStack(:, :, :, 1) = reshape( ...
+    firstImage, height, width, numChannels);
+
+%% ================= 读取剩余图片 =================
+
+fprintf('正在读取图片……\n');
+
+for n = 2:numFrames
+
+    [currentImage, map] = imread( ...
+        fullfile(folderPath, files(n).name));
+
+    if ~isempty(map)
+        currentImage = ind2rgb(currentImage, map);
+    end
+
+    currentImage = im2single(currentImage);
+
+    if size(currentImage, 1) ~= height || ...
+       size(currentImage, 2) ~= width
+
+        error('第 %d 张图片的尺寸与第一张图片不同：%s', ...
+            startFrame + n - 1, files(n).name);
+    end
+
+    if strcmpi(processMode, 'gray')
+
+        if size(currentImage, 3) == 3
+            currentImage = ...
+                0.2989 * currentImage(:, :, 1) + ...
+                0.5870 * currentImage(:, :, 2) + ...
+                0.1140 * currentImage(:, :, 3);
+        end
+
+    else
+
+        if size(currentImage, 3) ~= 3
+            error('第 %d 张图片不是 RGB 图片：%s', ...
+                startFrame + n - 1, files(n).name);
+        end
+    end
+
+    imageStack(:, :, :, n) = reshape( ...
+        currentImage, height, width, numChannels);
+
+    if mod(n, 100) == 0 || n == numFrames
+        fprintf('已读取 %d / %d 张图片。\n', ...
+            n, numFrames);
+    end
+end
+
+fprintf('所有选中图片读取完成。\n');
+
+%% ================= 去除时间平均值 =================
+%
+% 去除每个像素时间轴上的直流分量。
+% 如果希望保留直流背景，可以注释下面两行。
+
+timeMean = mean(imageStack, 4);
+signalStack = imageStack - timeMean;
+
+% 不再需要原始 imageStack 时释放内存
+clear imageStack timeMean;
+
+%% ================= 沿时间轴进行 FFT =================
+%
+% 第四维是时间维，因此沿第四维进行 FFT。
+
+fprintf('正在沿时间轴进行 FFT……\n');
+
+fftResult = fft(signalStack, [], 4);
+
+clear signalStack;
+
+fprintf('FFT 计算完成。\n');
+
+%% ================= 建立频率轴 =================
+
+frequencyResolution = Fs / numFrames;
+
+oneSidedLength = floor(numFrames / 2) + 1;
+
+frequencyAxis = ...
+    (0 : oneSidedLength - 1) * frequencyResolution;
+
+% 找到距离目标频率最近的频率点
+[~, targetIndex] = min( ...
+    abs(frequencyAxis - targetFreq));
+
+actualFreq = frequencyAxis(targetIndex);
+
+fprintf('\n');
+fprintf('设置的目标频率：%.6f Hz\n', targetFreq);
+fprintf('实际提取的频率：%.6f Hz\n', actualFreq);
+fprintf('频率分辨率：%.6f Hz\n', frequencyResolution);
+fprintf('奈奎斯特频率：%.6f Hz\n', Fs / 2);
+fprintf('目标频率索引：%d\n', targetIndex);
+
+if abs(actualFreq - targetFreq) > ...
+        frequencyResolution / 2
+
+    warning('实际频率与目标频率差异较大，请增加处理帧数。');
+end
+
+%% ================= 提取目标频率的幅值 =================
+
+targetComplex = fftResult(:, :, :, targetIndex);
+
+% 双边频谱幅值归一化
+targetAmplitude = abs(targetComplex) / numFrames;
+
+% 单边频谱修正：
+% 除直流和奈奎斯特频率外，其余频率幅值乘2
+
+isDC = targetIndex == 1;
+
+isNyquist = ...
+    mod(numFrames, 2) == 0 && ...
+    targetIndex == numFrames / 2 + 1;
+
+if ~isDC && ~isNyquist
+    targetAmplitude = 2 * targetAmplitude;
+end
+
+% 提取相位
+targetPhase = angle(targetComplex);
+
+%% ================= 显示目标频率幅值图 =================
+
+amplitudeDisplay = normalizeImage(targetAmplitude);
+
+figure( ...
+    'Name', '目标频率幅值图', ...
+    'NumberTitle', 'off');
+
+if numChannels == 1
+    imagesc(amplitudeDisplay(:, :, 1));
+    axis image;
+    axis tight;
+    colormap gray;
+    colorbar;
+else
+    imshow(amplitudeDisplay);
+end
+
+title(sprintf( ...
+    '目标频率幅值图：%.4f Hz，第 %d～%d 张', ...
+    actualFreq, startFrame, endFrame), ...
+    'FontName', chineseFont, ...
+    'Interpreter', 'none');
+
+xlabel('横向像素', ...
+    'FontName', chineseFont, ...
+    'Interpreter', 'none');
+
+ylabel('纵向像素', ...
+    'FontName', chineseFont, ...
+    'Interpreter', 'none');
+
+%% ================= 显示目标频率相位图 =================
+
+phaseDisplay = (targetPhase + pi) / (2 * pi);
+
+figure( ...
+    'Name', '目标频率相位图', ...
+    'NumberTitle', 'off');
+
+if numChannels == 1
+    imagesc(phaseDisplay(:, :, 1));
+    axis image;
+    axis tight;
+    colormap hsv;
+    colorbar;
+else
+    imshow(phaseDisplay);
+end
+
+title(sprintf( ...
+    '目标频率相位图：%.4f Hz，第 %d～%d 张', ...
+    actualFreq, startFrame, endFrame), ...
+    'FontName', chineseFont, ...
+    'Interpreter', 'none');
+
+xlabel('横向像素', ...
+    'FontName', chineseFont, ...
+    'Interpreter', 'none');
+
+ylabel('纵向像素', ...
+    'FontName', chineseFont, ...
+    'Interpreter', 'none');
+
+%% ================= 建立输出文件夹 =================
+
+outputFolder = fullfile( ...
+    folderPath, ...
+    sprintf('FFT_output_frames_%d_%d', ...
+    startFrame, endFrame));
+
+if ~exist(outputFolder, 'dir')
+    mkdir(outputFolder);
+end
+
+%% ================= 保存幅值图和相位图 =================
+
+amplitudeFile = fullfile( ...
+    outputFolder, ...
+    sprintf( ...
+    'Amplitude_%.4fHz_frames_%d_%d.png', ...
+    actualFreq, startFrame, endFrame));
+
+phaseFile = fullfile( ...
+    outputFolder, ...
+    sprintf( ...
+    'Phase_%.4fHz_frames_%d_%d.png', ...
+    actualFreq, startFrame, endFrame));
+
+if numChannels == 1
+    imwrite(amplitudeDisplay(:, :, 1), amplitudeFile);
+    imwrite(phaseDisplay(:, :, 1), phaseFile);
+else
+    imwrite(amplitudeDisplay, amplitudeFile);
+    imwrite(phaseDisplay, phaseFile);
+end
+
+%% ================= 保存原始频域数据 =================
+
+resultFile = fullfile( ...
+    outputFolder, ...
+    sprintf( ...
+    'FFT_result_%.4fHz_frames_%d_%d.mat', ...
+    actualFreq, startFrame, endFrame));
+
+selectedFileNames = {files.name};
+
+save(resultFile, ...
+    'targetAmplitude', ...
+    'targetPhase', ...
+    'targetComplex', ...
+    'actualFreq', ...
+    'targetFreq', ...
+    'Fs', ...
+    'frequencyAxis', ...
+    'frequencyResolution', ...
+    'numFrames', ...
+    'startFrame', ...
+    'endFrame', ...
+    'selectedFileNames', ...
+    '-v7.3');
+
+fprintf('\n目标频率幅值图已保存：\n%s\n', ...
+    amplitudeFile);
+
+fprintf('\n目标频率相位图已保存：\n%s\n', ...
+    phaseFile);
+
+fprintf('\n原始频域数据已保存：\n%s\n', ...
+    resultFile);
+
+%% ================= 单频逆变换重构 =================
+
+if generateReconstruction
+
+    fprintf('\n正在进行单频逆傅里叶重构……\n');
+
+    selectedSpectrum = zeros( ...
+        size(fftResult), 'like', fftResult);
+
+    % 保留正频率
+    selectedSpectrum(:, :, :, targetIndex) = ...
+        fftResult(:, :, :, targetIndex);
+
+    % 对非直流、非奈奎斯特频率，
+    % 同时保留对应的负频率，以获得实数结果
+    if ~isDC && ~isNyquist
+
+        negativeIndex = ...
+            numFrames - targetIndex + 2;
+
+        selectedSpectrum(:, :, :, negativeIndex) = ...
+            fftResult(:, :, :, negativeIndex);
+    end
+
+    % 沿时间维进行逆傅里叶变换
+    reconstructedStack = real( ...
+        ifft(selectedSpectrum, [], 4));
+
+    clear selectedSpectrum;
+
+    reconstructionFolder = fullfile( ...
+        outputFolder, ...
+        sprintf( ...
+        'Reconstruction_%.4fHz_frames_%d_%d', ...
+        actualFreq, startFrame, endFrame));
+
+    if ~exist(reconstructionFolder, 'dir')
+        mkdir(reconstructionFolder);
+    end
+
+    % 对整个重构序列统一归一化
+    reconMin = min(reconstructedStack(:));
+    reconMax = max(reconstructedStack(:));
+
+    reconstructedDisplay = ...
+        (reconstructedStack - reconMin) ./ ...
+        (reconMax - reconMin + eps('single'));
+
+    fprintf('正在保存单频重构序列……\n');
+
+    for n = 1:numFrames
+
+        outputImage = ...
+            reconstructedDisplay(:, :, :, n);
+
+        if numChannels == 1
+            outputImage = outputImage(:, :, 1);
+        end
+
+        % 对应原始排序序列中的图片编号
+        originalFrameIndex = startFrame + n - 1;
+
+        outputName = fullfile( ...
+            reconstructionFolder, ...
+            sprintf( ...
+            'reconstructed_original_%05d.bmp', ...
+            originalFrameIndex));
+
+        imwrite(outputImage, outputName);
+
+        if mod(n, 100) == 0 || n == numFrames
+            fprintf('已保存 %d / %d 张重构图片。\n', ...
+                n, numFrames);
+        end
+    end
+
+    fprintf('\n单频重构序列已保存至：\n%s\n', ...
+        reconstructionFolder);
+end
+
+fprintf('\n全部处理完成。\n');
+
+%% ====================================================
+%                     局部函数
+% =====================================================
+
+function normalizedImage = normalizeImage(inputImage)
+
+    minValue = min(inputImage(:));
+    maxValue = max(inputImage(:));
+
+    normalizedImage = ...
+        (inputImage - minValue) ./ ...
+        (maxValue - minValue + eps('single'));
+
+end
+
+function sortedFiles = sortBmpFiles(files)
+
+    fileNames = {files.name};
+    fileNumbers = nan(length(fileNames), 1);
+
+    for k = 1:length(fileNames)
+
+        numberTokens = regexp( ...
+            fileNames{k}, '\d+', 'match');
+
+        if ~isempty(numberTokens)
+            fileNumbers(k) = ...
+                str2double(numberTokens{end});
+        end
+    end
+
+    % 如果所有文件名中都包含数字，则按最后一组数字排序
+    if all(~isnan(fileNumbers))
+
+        [~, order] = sort(fileNumbers);
+
+    else
+
+        % 否则按照文件名排序
+        lowerNames = lower(fileNames);
+        [~, order] = sort(lowerNames);
+    end
+
+    sortedFiles = files(order);
+
+end

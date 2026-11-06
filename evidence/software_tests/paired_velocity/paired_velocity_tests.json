@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "scope": "copied synthetic statistics fixtures only",
+  "schema1_rows": 90,
+  "schema2_rows": 54,
+  "zero_difference_ci": true,
+  "unidentifiable_and_low_count_ci_nan": true,
+  "insufficient_bootstrap_ci_nan": true,
+  "truth_not_used_for_selection": true,
+  "source_summaries_unchanged": true,
+  "rng_unchanged": true
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "Synthetic common multiplicative illumination, not end-to-end particle sizing",
+  "zero_flicker_identity": true,
+  "recovery": [
+    {
+      "frequency": 420,
+      "estimated_frequency": 420.00001102792351,
+      "gain_RMS_error": 7.4703336054873295E-6,
+      "relative_image_error_before": 0.03535538737331264,
+      "relative_image_error_after": 7.4842068337801639E-6,
+      "amplitude": 0.050005244520297129
+    },
+    {
+      "frequency": 423.7,
+      "estimated_frequency": 423.70000818833779,
+      "gain_RMS_error": 3.594027079152523E-6,
+      "relative_image_error_before": 0.035356045604927167,
+      "relative_image_error_after": 3.5981300332078652E-6,
+      "amplitude": 0.050002209475968
+    }
+  ],
+  "inconsistent_tiles_rejected": true,
+  "magnetic_frequency_protected": true,
+  "inconsistent_phase_rejected": true,
+  "multifrequency_gain_RMS": 1.1787427705998291E-5,
+  "extreme_gain_rejected": true,
+  "input_validation": true,
+  "pass": true
+}

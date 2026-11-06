@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "fixture": true,
+  "summary_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\log_input_fixture",
+  "image_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\log_zero",
+  "summary_rows": 108,
+  "pairwise_rows": 90,
+  "protocol_sha256": "4719ad1141785fa035fcfb5df7cb438c1f5bef1bf453cdfaa8d36a1c1bdb5096",
+  "summary_sha256": "af47b569ed0e67673b1deb947e3706db0c4da1d220533225509dcff81ac0d7a5",
+  "pairwise_sha256": "475bc82b02596c288a68f05d98e4ea03fc63b704b46419ed19548da2d0e01a7a",
+  "helper_sha256": "bd87c8c0cc9842406b6f6534b408fa32783fb94948cae842b086a9cd45ab0be2",
+  "matlab_version": "24.2.0.2712019 (R2024b)",
+  "generated_at": "2026-11-06 00:33:16 *",
+  "bootstrap_replicates": 2000,
+  "missing_diameter_points": 3,
+  "finite_diameter_without_ci": 3,
+  "zero_global_illumination_rows": 18,
+  "artifacts": [
+    {
+      "stem": "fixture_schema1_diameter_error",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\log_zero\\fixture_schema1_diameter_error.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\log_zero\\fixture_schema1_diameter_error.pdf",
+      "log_axis": false,
+      "display_floor_pct": null
+    },
+    {
+      "stem": "fixture_schema1_illumination_global",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\log_zero\\fixture_schema1_illumination_global.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\log_zero\\fixture_schema1_illumination_global.pdf",
+      "log_axis": true,
+      "display_floor_pct": 1E-8
+    },
+    {
+      "stem": "fixture_schema1_illumination_regions",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\log_zero\\fixture_schema1_illumination_regions.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\log_zero\\fixture_schema1_illumination_regions.pdf",
+      "log_axis": true,
+      "display_floor_pct": 1E-8
+    }
+  ],
+  "interpretation": "CSV-only exploratory plots; no automatic performance or acceptance conclusion"
+}

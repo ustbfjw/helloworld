@@ -1,0 +1,17 @@
+绘图完成：schema1，fixture=1，3张PNG/PDF；CSV保持只读。
+LABEL_AXIS_PASS schema1_fixture: region=2 ticks x 3 axes; global=6 ticks x 3 axes
+绘图完成：schema2，fixture=1，4张PNG/PDF；CSV保持只读。
+LABEL_AXIS_PASS schema2_fixture: region=6 ticks x 3 axes; global=6 ticks x 3 axes
+绘图完成：schema1，fixture=0，3张PNG/PDF；CSV保持只读。
+LABEL_AXIS_PASS schema1_formal: region=2 ticks x 3 axes; global=6 ticks x 3 axes
+REGION_LABEL_REGRESSION_PASS
+[警告: 执行 'onCleanup' 类析构函数时，捕获到以下错误:
+错误使用 groot
+找不到根对象。
+
+出错 test_plot_region_labels>@()set(groot,'DefaultFigureDeleteFcn',old_delete) (第 25 行)
+cleanup=onCleanup(@()set(groot,'DefaultFigureDeleteFcn',old_delete)); %#ok<NASGU>
+                         ^^^^^
+出错 onCleanup/delete (第 25 行)
+            obj.task();
+            ^^^^^^^^^^] 

@@ -1,0 +1,17 @@
+{
+  "scope": "Renderer equivalence only, not end-to-end sizing acceptance",
+  "frames_per_group": 100,
+  "camera_Npx": 128,
+  "exposure_samples": 4,
+  "shared_standard_normal_noise": true,
+  "global_exact_cases": 15,
+  "global_video_metadata_rng_exact": true,
+  "noisy_local_halves_exact": true,
+  "noiseless_local_halves_exact": true,
+  "noiseless_rng_exact": true,
+  "zero_amplitude_identity": true,
+  "instantaneous_compatibility": true,
+  "invalid_conditions_rejected_before_rng": 26,
+  "pass": true,
+  "elapsed_seconds": 12.1863845
+}

@@ -1,0 +1,7 @@
+mono200 视频1/60 seed=333001，六条件渲染 16.9s
+{在不同结构体之间进行下标赋值。
+
+出错 run_targeted_ablation (第 93 行)
+            items(c,m)=struct('stats',stats,'metric',metric,'illumination_info',info,'reused_from',reused_from); %#ok<AGROW>
+            ^^^^^^^^^^
+} 

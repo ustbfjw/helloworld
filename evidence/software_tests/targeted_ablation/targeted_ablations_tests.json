@@ -1,0 +1,332 @@
+{
+  "scope": "Synthetic ablation semantics, not end-to-end sizing acceptance",
+  "matlab_version": "24.2.0.2712019 (R2024b)",
+  "seed": 2.0261105E+7,
+  "n_frames": 5000,
+  "fps": 5000,
+  "default_equals_explicit_true": true,
+  "reference_compared": true,
+  "reference_root": "C:/Users/PC/Documents/Codex/2026-11-05/c-users-pc-desktop-inta-magnetic/outputs/iNTA_magnetic_fused",
+  "reference_default_identical": true,
+  "records": [
+    {
+      "condition": "static",
+      "method": "full",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0,
+      "left_residual_rms": 0,
+      "right_residual_rms": 0,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": []
+    },
+    {
+      "condition": "static",
+      "method": "no_spatial_gate",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0,
+      "left_residual_rms": 0,
+      "right_residual_rms": 0,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": []
+    },
+    {
+      "condition": "static",
+      "method": "no_magnetic_guard",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0,
+      "left_residual_rms": 0,
+      "right_residual_rms": 0,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": []
+    },
+    {
+      "condition": "static",
+      "method": "no_refinement",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0,
+      "left_residual_rms": 0,
+      "right_residual_rms": 0,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": []
+    },
+    {
+      "condition": "global_423p7",
+      "method": "full",
+      "applied": true,
+      "accepted_frequencies_Hz": 423.699995100378,
+      "gain_residual_rms": 2.0475697747122155E-5,
+      "left_residual_rms": 2.0475697747122155E-5,
+      "right_residual_rms": 2.0475697747122155E-5,
+      "coherence": 0.99999999992905575,
+      "amplitude_cv": 1.3540083470195485E-5,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "global_423p7",
+      "method": "no_spatial_gate",
+      "applied": true,
+      "accepted_frequencies_Hz": 423.699995100378,
+      "gain_residual_rms": 2.0475697747122155E-5,
+      "left_residual_rms": 2.0475697747122155E-5,
+      "right_residual_rms": 2.0475697747122155E-5,
+      "coherence": 0.99999999992905575,
+      "amplitude_cv": 1.3540083470195485E-5,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "global_423p7",
+      "method": "no_magnetic_guard",
+      "applied": true,
+      "accepted_frequencies_Hz": 423.699995100378,
+      "gain_residual_rms": 2.0475697747122155E-5,
+      "left_residual_rms": 2.0475697747122155E-5,
+      "right_residual_rms": 2.0475697747122155E-5,
+      "coherence": 0.99999999992905575,
+      "amplitude_cv": 1.3540083470195485E-5,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "global_423p7",
+      "method": "no_refinement",
+      "applied": true,
+      "accepted_frequencies_Hz": 424,
+      "gain_residual_rms": 0.02902346791744212,
+      "left_residual_rms": 0.02902346791744212,
+      "right_residual_rms": 0.02902346791744212,
+      "coherence": 0.99999999975894693,
+      "amplitude_cv": 1.0479272518343902E-5,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "near_11p4",
+      "method": "full",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0.056639073119162935,
+      "left_residual_rms": 0.056639073119162935,
+      "right_residual_rms": 0.056639073119162935,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": [
+        "位于磁驱动基频或受保护谐波邻域"
+      ]
+    },
+    {
+      "condition": "near_11p4",
+      "method": "no_spatial_gate",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0.056639073119162935,
+      "left_residual_rms": 0.056639073119162935,
+      "right_residual_rms": 0.056639073119162935,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": [
+        "位于磁驱动基频或受保护谐波邻域"
+      ]
+    },
+    {
+      "condition": "near_11p4",
+      "method": "no_magnetic_guard",
+      "applied": true,
+      "accepted_frequencies_Hz": 11.399994986445584,
+      "gain_residual_rms": 0.00014141082985747011,
+      "left_residual_rms": 0.00014141082985747011,
+      "right_residual_rms": 0.00014141082985747011,
+      "coherence": 0.99999999978236542,
+      "amplitude_cv": 2.1043051219267324E-5,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "near_11p4",
+      "method": "no_refinement",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0.056639073119162935,
+      "left_residual_rms": 0.056639073119162935,
+      "right_residual_rms": 0.056639073119162935,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": [
+        "位于磁驱动基频或受保护谐波邻域"
+      ]
+    },
+    {
+      "condition": "near_13p4",
+      "method": "full",
+      "applied": true,
+      "accepted_frequencies_Hz": 13.400000309786128,
+      "gain_residual_rms": 0.0001149391665317657,
+      "left_residual_rms": 0.0001149391665317657,
+      "right_residual_rms": 0.0001149391665317657,
+      "coherence": 0.99999999992734967,
+      "amplitude_cv": 4.487111909631387E-5,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "near_13p4",
+      "method": "no_spatial_gate",
+      "applied": true,
+      "accepted_frequencies_Hz": 13.400000309786128,
+      "gain_residual_rms": 0.0001149391665317657,
+      "left_residual_rms": 0.0001149391665317657,
+      "right_residual_rms": 0.0001149391665317657,
+      "coherence": 0.99999999992734967,
+      "amplitude_cv": 4.487111909631387E-5,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "near_13p4",
+      "method": "no_magnetic_guard",
+      "applied": true,
+      "accepted_frequencies_Hz": 13.400000309786128,
+      "gain_residual_rms": 0.0001149391665317657,
+      "left_residual_rms": 0.0001149391665317657,
+      "right_residual_rms": 0.0001149391665317657,
+      "coherence": 0.99999999992734967,
+      "amplitude_cv": 4.487111909631387E-5,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "near_13p4",
+      "method": "no_refinement",
+      "applied": true,
+      "accepted_frequencies_Hz": 13,
+      "gain_residual_rms": 0.036538990718218776,
+      "left_residual_rms": 0.036538990718218776,
+      "right_residual_rms": 0.036538990718218776,
+      "coherence": 0.9999999998757052,
+      "amplitude_cv": 4.6967622462150447E-5,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "same_10",
+      "method": "full",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0.056568486664025253,
+      "left_residual_rms": 0.056568486664025253,
+      "right_residual_rms": 0.056568486664025253,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": [
+        "位于磁驱动基频或受保护谐波邻域",
+        "位于保留的低频或Nyquist邻域"
+      ]
+    },
+    {
+      "condition": "same_10",
+      "method": "no_spatial_gate",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0.056568486664025253,
+      "left_residual_rms": 0.056568486664025253,
+      "right_residual_rms": 0.056568486664025253,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": [
+        "位于磁驱动基频或受保护谐波邻域",
+        "位于保留的低频或Nyquist邻域"
+      ]
+    },
+    {
+      "condition": "same_10",
+      "method": "no_magnetic_guard",
+      "applied": true,
+      "accepted_frequencies_Hz": 9.9999984866152882,
+      "gain_residual_rms": 5.0878383923964694E-7,
+      "left_residual_rms": 5.0878383923964694E-7,
+      "right_residual_rms": 5.0878383923964694E-7,
+      "coherence": 0.99999999991945476,
+      "amplitude_cv": 3.7730995925156187E-6,
+      "rejection_reasons": [
+        "位于保留的低频或Nyquist邻域"
+      ]
+    },
+    {
+      "condition": "same_10",
+      "method": "no_refinement",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0.056568486664025253,
+      "left_residual_rms": 0.056568486664025253,
+      "right_residual_rms": 0.056568486664025253,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": [
+        "位于磁驱动基频或受保护谐波邻域",
+        "位于保留的低频或Nyquist邻域"
+      ]
+    },
+    {
+      "condition": "local_left_423p7",
+      "method": "full",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0.039928638514791615,
+      "left_residual_rms": 0.05646762211471102,
+      "right_residual_rms": 0,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": [
+        "四象限幅度一致性不足"
+      ]
+    },
+    {
+      "condition": "local_left_423p7",
+      "method": "no_spatial_gate",
+      "applied": true,
+      "accepted_frequencies_Hz": 423.69999029568606,
+      "gain_residual_rms": 0.02827401311147457,
+      "left_residual_rms": 0.028307578439519591,
+      "right_residual_rms": 0.028240407889159772,
+      "coherence": 0.999985698361555,
+      "amplitude_cv": 1.1546746155929435,
+      "rejection_reasons": []
+    },
+    {
+      "condition": "local_left_423p7",
+      "method": "no_magnetic_guard",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0.039928638514791615,
+      "left_residual_rms": 0.05646762211471102,
+      "right_residual_rms": 0,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": [
+        "四象限幅度一致性不足"
+      ]
+    },
+    {
+      "condition": "local_left_423p7",
+      "method": "no_refinement",
+      "applied": false,
+      "accepted_frequencies_Hz": [],
+      "gain_residual_rms": 0.039928638514791615,
+      "left_residual_rms": 0.05646762211471102,
+      "right_residual_rms": 0,
+      "coherence": [],
+      "amplitude_cv": [],
+      "rejection_reasons": [
+        "四象限幅度一致性不足"
+      ]
+    }
+  ],
+  "phase_gate_ablation": true,
+  "refined_magnetic_guard": true,
+  "median_harmonic_amplitude_guard": true,
+  "amplitude_and_gain_constraints": true,
+  "invalid_flag_values_rejected": 21,
+  "no_truth_leakage": true,
+  "rng_unchanged": true,
+  "pass": true
+}

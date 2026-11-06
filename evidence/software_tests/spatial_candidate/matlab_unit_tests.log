@@ -1,0 +1,12 @@
+SPATIAL smooth: before=0.03779842 after=0.0001979576 validation_reduction=0.99991867 f=423.69999075
+PASS test_validated_spatial_illumination: fallback, spatial model, heldout, magnetic guard and inputs.
+[]
+[{"id":"ISCL","message":"要提高性能，请使用 'isscalar' 而不是长度比较。","fix":1,"line":34,"column":[8,49]},{"id":"NOCOMMA","message":"不必要的额外逗号。","fix":1,"line":163,"column":[4,4]}]
+SPATIAL smooth: before=0.03779842 after=0.0001979576 validation_reduction=0.99991867 f=423.69999075
+PASS test_validated_spatial_illumination: fallback, spatial model, heldout, magnetic guard and inputs.
+[]
+[]
+SPATIAL smooth: before=0.03779842 after=0.0001979576 validation_reduction=0.99991867 f=423.69999075
+PASS test_validated_spatial_illumination: fallback, spatial model, heldout, magnetic guard and inputs.
+[]
+[]

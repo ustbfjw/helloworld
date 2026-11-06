@@ -1,0 +1,39 @@
+function gain = candidate_gain_block(model, idx)
+%CANDIDATE_GAIN_BLOCK 返回校正实际使用的单精度增益，不读取生成器真值。
+%   global模式返回1x1xT，供整帧广播；spatial模式返回NyxNxxT。
+%   空间模型用double参数重建，再统一转single；不能再叠除global_gain。
+%   idx是帧索引，省略时取全部帧；允许显式乱序/重复索引。
+required={'global_gain','spatial_coefficients','temporal_basis','is_spatial'};
+assert(isstruct(model) && isscalar(model) && all(isfield(model,required)), ...
+    'iNTA:candidate:InvalidModel','model必须包含全部指定字段。');
+assert(islogical(model.is_spatial) && isscalar(model.is_spatial), ...
+    'iNTA:candidate:InvalidModel','is_spatial必须为逻辑标量。');
+g=model.global_gain;
+assert(isnumeric(g) && isreal(g) && isvector(g) && ~isempty(g) && ...
+    all(isfinite(g(:))) && all(g(:)>0), ...
+    'iNTA:candidate:InvalidModel','global_gain必须为有限正实向量。');
+F=numel(g);
+if nargin<2, idx=1:F; end
+assert(isnumeric(idx) && isreal(idx) && isvector(idx) && ~isempty(idx) && ...
+    all(isfinite(idx(:))) && all(idx(:)>=1 & idx(:)<=F & idx(:)==round(idx(:))), ...
+    'iNTA:candidate:InvalidFrames','帧索引必须为有效的正整数向量。');
+idx=double(idx(:).');
+if ~model.is_spatial
+    assert(isempty(model.spatial_coefficients) && isempty(model.temporal_basis), ...
+        'iNTA:candidate:InvalidModel','全局回退模式不得携带未使用的空间参数。');
+    gain=reshape(single(g(idx)),1,1,[]);
+else
+    coefficients=model.spatial_coefficients; basis=model.temporal_basis;
+    assert(all(g(:)==1),'iNTA:candidate:InvalidModel','空间模式的global_gain必须全为1。');
+    assert(isnumeric(coefficients) && isreal(coefficients) && ~isempty(coefficients) && ...
+        ndims(coefficients)<=3 && all(isfinite(coefficients(:))), ...
+        'iNTA:candidate:InvalidModel','空间系数必须为有限实数NyxNxx2K数组。');
+    L=size(coefficients,3); ny=size(coefficients,1); nx=size(coefficients,2);
+    assert(L>=2 && mod(L,2)==0 && isnumeric(basis) && isreal(basis) && ...
+        ismatrix(basis) && isequal(size(basis),[F,L]) && all(isfinite(basis(:))), ...
+        'iNTA:candidate:InvalidModel','时间基必须为Fx2K，且与空间系数匹配。');
+    gain=reshape(single(1+reshape(double(coefficients),ny*nx,L)*double(basis(idx,:)).'),ny,nx,[]);
+end
+assert(all(isfinite(gain(:))) && all(gain(:)>0), ...
+    'iNTA:candidate:InvalidGain','实际单精度增益必须有限且为正。');
+end

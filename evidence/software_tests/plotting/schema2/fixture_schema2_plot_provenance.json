@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "fixture": true,
+  "summary_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\candidate_statistics_fixture",
+  "image_directory": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\schema2",
+  "summary_rows": 72,
+  "pairwise_rows": 54,
+  "protocol_sha256": "4cac89450e04b230b27e44d93fa78b6e737cb1d99346206716a061ac39b21df8",
+  "summary_sha256": "99fd1a9fb39bf9def530fb41318d18511582e8465340e5cb0a569f586261be22",
+  "pairwise_sha256": "f7e817df3828ae9db928536fb18d467244ef8541ae11680e60a3d79af5681197",
+  "helper_sha256": "e207f9236b61719562848f9b6ccffadfd6d5bc09168bdbf61a7132d3d24c9959",
+  "matlab_version": "24.2.0.2712019 (R2024b)",
+  "generated_at": "2026-11-06 00:47:13 *",
+  "bootstrap_replicates": 2000,
+  "missing_diameter_points": 3,
+  "finite_diameter_without_ci": 3,
+  "zero_global_illumination_rows": 12,
+  "artifacts": [
+    {
+      "stem": "fixture_schema2_diameter_error",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\schema2\\fixture_schema2_diameter_error.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\schema2\\fixture_schema2_diameter_error.pdf",
+      "log_axis": false,
+      "display_floor_pct": null
+    },
+    {
+      "stem": "fixture_schema2_illumination_global",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\schema2\\fixture_schema2_illumination_global.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\schema2\\fixture_schema2_illumination_global.pdf",
+      "log_axis": false,
+      "display_floor_pct": null
+    },
+    {
+      "stem": "fixture_schema2_illumination_regions",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\schema2\\fixture_schema2_illumination_regions.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\schema2\\fixture_schema2_illumination_regions.pdf",
+      "log_axis": false,
+      "display_floor_pct": null
+    },
+    {
+      "stem": "fixture_schema2_spatial_acceptance",
+      "png": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\schema2\\fixture_schema2_spatial_acceptance.png",
+      "pdf": "C:\\Users\\PC\\Documents\\Codex\\2026-11-05\\c-users-pc-desktop-inta-magnetic\\work\\postprocess_plot_fixture\\schema2\\fixture_schema2_spatial_acceptance.pdf",
+      "log_axis": false,
+      "display_floor_pct": null
+    }
+  ],
+  "interpretation": "CSV-only exploratory plots; no automatic performance or acceptance conclusion"
+}

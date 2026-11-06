@@ -1,0 +1,11 @@
+{
+  "fixture": true,
+  "schema1_rows": 108,
+  "schema2_rows": 72,
+  "images_and_pdfs": 10,
+  "missing_diameter_points_per_schema": 3,
+  "finite_no_ci_per_schema": 3,
+  "log_axis_and_zero_exercised": true,
+  "invalid_inputs_rejected": 6,
+  "pass": true
+}

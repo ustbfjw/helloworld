@@ -1,0 +1,21 @@
+CANDIDATE_RENDERER mono30: six frozen cases exact; three stationary gain maps verified.
+CANDIDATE_RENDERER mono100: six frozen cases exact; three stationary gain maps verified.
+CANDIDATE_RENDERER mono200: six frozen cases exact; three stationary gain maps verified.
+PASS test_candidate_renderer: 18 frozen cases, 9 known-gain cases, 9 independent pixel references (16.62 s).
+                                    scope: 'Renderer correctness only; held-out shapes are not estimator acceptance'
+                         frames_per_group: 100
+                               camera_Npx: 128
+                         exposure_samples: 4
+                     baseline_exact_cases: 18
+                    stationary_gain_cases: 9
+                    pixel_reference_cases: 9
+    wrong_exposure_order_different_pixels: 3981
+       wrong_noise_order_different_pixels: 1289
+             maximum_stationary_adu_error: 1.0373
+                       maximum_mask_error: 2.2204e-16
+              baseline_metadata_rng_exact: 1
+                  zero_amplitude_identity: 1
+                   unknown_shape_rejected: 1
+                                     pass: 1
+                          elapsed_seconds: 16.6199
+

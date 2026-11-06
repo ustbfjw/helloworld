@@ -1,0 +1,63 @@
+TARGETED static / full applied=0 gainRMS=0 f=[]
+TARGETED static / no_spatial_gate applied=0 gainRMS=0 f=[]
+TARGETED static / no_magnetic_guard applied=0 gainRMS=0 f=[]
+TARGETED static / no_refinement applied=0 gainRMS=0 f=[]
+TARGETED global_423p7 / full applied=1 gainRMS=2.0475698e-05 f=423.7
+TARGETED global_423p7 / no_spatial_gate applied=1 gainRMS=2.0475698e-05 f=423.7
+TARGETED global_423p7 / no_magnetic_guard applied=1 gainRMS=2.0475698e-05 f=423.7
+TARGETED global_423p7 / no_refinement applied=1 gainRMS=0.029023468 f=424
+TARGETED near_11p4 / full applied=0 gainRMS=0.056639073 f=[]
+TARGETED near_11p4 / no_spatial_gate applied=0 gainRMS=0.056639073 f=[]
+TARGETED near_11p4 / no_magnetic_guard applied=1 gainRMS=0.00014141083 f=11.399995
+TARGETED near_11p4 / no_refinement applied=0 gainRMS=0.056639073 f=[]
+TARGETED near_13p4 / full applied=1 gainRMS=0.00011493917 f=13.4
+TARGETED near_13p4 / no_spatial_gate applied=1 gainRMS=0.00011493917 f=13.4
+TARGETED near_13p4 / no_magnetic_guard applied=1 gainRMS=0.00011493917 f=13.4
+TARGETED near_13p4 / no_refinement applied=1 gainRMS=0.036538991 f=13
+TARGETED same_10 / full applied=0 gainRMS=0.056568487 f=[]
+TARGETED same_10 / no_spatial_gate applied=0 gainRMS=0.056568487 f=[]
+TARGETED same_10 / no_magnetic_guard applied=1 gainRMS=5.0878384e-07 f=9.9999985
+TARGETED same_10 / no_refinement applied=0 gainRMS=0.056568487 f=[]
+TARGETED local_left_423p7 / full applied=0 gainRMS=0.039928639 f=[]
+TARGETED local_left_423p7 / no_spatial_gate applied=1 gainRMS=0.028274013 f=423.69999
+TARGETED local_left_423p7 / no_magnetic_guard applied=0 gainRMS=0.039928639 f=[]
+TARGETED local_left_423p7 / no_refinement applied=0 gainRMS=0.039928639 f=[]
+PASS test_targeted_ablations: six conditions, component switches, defaults, flags and constraints.
+ILLUMINATION f=420.000 estimated=420.000011 gain_RMS=0.00000747 image_before=0.035355 image_after=0.00000748
+ILLUMINATION f=423.700 estimated=423.700008 gain_RMS=0.00000359 image_before=0.035356 image_after=0.00000360
+PASS test_common_illumination: identity, on/off-bin gain recovery, spatial consistency, magnetic guard, no truth leakage.
+  包含以下字段的 2x1 struct 数组:
+
+    id
+    message
+    fix
+    line
+    column
+
+TARGETED static / full applied=0 gainRMS=0 f=[]
+TARGETED static / no_spatial_gate applied=0 gainRMS=0 f=[]
+TARGETED static / no_magnetic_guard applied=0 gainRMS=0 f=[]
+TARGETED static / no_refinement applied=0 gainRMS=0 f=[]
+TARGETED global_423p7 / full applied=1 gainRMS=2.0475698e-05 f=423.7
+TARGETED global_423p7 / no_spatial_gate applied=1 gainRMS=2.0475698e-05 f=423.7
+TARGETED global_423p7 / no_magnetic_guard applied=1 gainRMS=2.0475698e-05 f=423.7
+TARGETED global_423p7 / no_refinement applied=1 gainRMS=0.029023468 f=424
+TARGETED near_11p4 / full applied=0 gainRMS=0.056639073 f=[]
+TARGETED near_11p4 / no_spatial_gate applied=0 gainRMS=0.056639073 f=[]
+TARGETED near_11p4 / no_magnetic_guard applied=1 gainRMS=0.00014141083 f=11.399995
+TARGETED near_11p4 / no_refinement applied=0 gainRMS=0.056639073 f=[]
+TARGETED near_13p4 / full applied=1 gainRMS=0.00011493917 f=13.4
+TARGETED near_13p4 / no_spatial_gate applied=1 gainRMS=0.00011493917 f=13.4
+TARGETED near_13p4 / no_magnetic_guard applied=1 gainRMS=0.00011493917 f=13.4
+TARGETED near_13p4 / no_refinement applied=1 gainRMS=0.036538991 f=13
+TARGETED same_10 / full applied=0 gainRMS=0.056568487 f=[]
+TARGETED same_10 / no_spatial_gate applied=0 gainRMS=0.056568487 f=[]
+TARGETED same_10 / no_magnetic_guard applied=1 gainRMS=5.0878384e-07 f=9.9999985
+TARGETED same_10 / no_refinement applied=0 gainRMS=0.056568487 f=[]
+TARGETED local_left_423p7 / full applied=0 gainRMS=0.039928639 f=[]
+TARGETED local_left_423p7 / no_spatial_gate applied=1 gainRMS=0.028274013 f=423.69999
+TARGETED local_left_423p7 / no_magnetic_guard applied=0 gainRMS=0.039928639 f=[]
+TARGETED local_left_423p7 / no_refinement applied=0 gainRMS=0.039928639 f=[]
+PASS test_targeted_ablations: six conditions, component switches, defaults, flags and constraints.
+[]
+[{"id":"MSNU","message":"此处之前隐藏了一条代码分析器消息，但该消息不再产生。","fix":1,"line":180,"column":[69,79]},{"id":"MSNU","message":"此处之前隐藏了一条代码分析器消息，但该消息不再产生。","fix":1,"line":198,"column":[63,73]}]

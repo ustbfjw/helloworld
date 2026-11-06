@@ -1,0 +1,15 @@
+{
+  "test": "targeted_summary_synthetic_fixture",
+  "passed": true,
+  "input_mat_files": 140,
+  "summary_rows": 108,
+  "pairwise_rows": 90,
+  "video_metric_rows": 5040,
+  "bootstrap_replicates": 2000,
+  "elapsed_seconds": 21.1570929,
+  "empty_videos_retained": true,
+  "one_active_video_has_no_size_ci": true,
+  "negative_D_retained": true,
+  "unidentifiable_velocity_is_nan": true,
+  "synthetic_fixture_not_performance_evidence": true
+}

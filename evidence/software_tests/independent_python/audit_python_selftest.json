@@ -1,0 +1,15 @@
+{
+  "test": "independent_python_audit",
+  "passed": true,
+  "schema1_rows": 108,
+  "schema2_rows": 72,
+  "max_scaled_difference": 4.864156490015101e-14,
+  "cache_exact_and_mismatch_checked": true,
+  "incomplete_not_passed": true,
+  "protocol_tamper_rejected": true,
+  "source_hash_match_and_mismatch_checked": true,
+  "negative_D_and_nan_preserved": true,
+  "formal_results_audited": false,
+  "parameter_hash_match_and_mismatch_checked": true,
+  "final_script_sha256": "5c02d12defc5cfba5d2cb465479d124bf9c1acf9a557f715829d24ed9fa9474f"
+}

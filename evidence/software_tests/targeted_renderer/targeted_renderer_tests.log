@@ -1,0 +1,20 @@
+TARGETED_RENDERER mono30: 5 global videos/metadata/RNG exact; noisy local halves exact.
+TARGETED_RENDERER mono100: 5 global videos/metadata/RNG exact; noisy local halves exact.
+TARGETED_RENDERER mono200: 5 global videos/metadata/RNG exact; noisy local halves exact.
+PASS test_targeted_renderer: 15 exact global cases; local/zero/instantaneous checks; 26 invalid inputs (12.19 s).
+                                     scope: 'Renderer equivalence only, not end-to-end sizing acceptance'
+                          frames_per_group: 100
+                                camera_Npx: 128
+                          exposure_samples: 4
+              shared_standard_normal_noise: 1
+                        global_exact_cases: 15
+           global_video_metadata_rng_exact: 1
+                  noisy_local_halves_exact: 1
+              noiseless_local_halves_exact: 1
+                       noiseless_rng_exact: 1
+                   zero_amplitude_identity: 1
+               instantaneous_compatibility: 1
+    invalid_conditions_rejected_before_rng: 26
+                                      pass: 1
+                           elapsed_seconds: 12.1864
+

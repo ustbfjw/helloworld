@@ -1,0 +1,90 @@
+协议已冻结：C:/Users/PC/Documents/Codex/2026-11-05/c-users-pc-desktop-inta-magnetic/work/candidate_runner_fixture_final
+mono30 视频1/1 seed=880001，六条件渲染 2.7s
+  static median              active=0 loc=0 gainRMS=0 reuse= 1.5s
+  static pn                  active=0 loc=0 gainRMS=9.82592e-05 reuse= 1.1s
+  static full                active=0 loc=0 gainRMS=0 reuse=median 0.1s
+  static spatial_validated   active=0 loc=0 gainRMS=0 reuse=median 0.1s
+  global_offbin median              active=0 loc=0 gainRMS=0.0563053 reuse= 1.1s
+  global_offbin pn                  active=0 loc=0 gainRMS=9.79789e-05 reuse= 1.3s
+  global_offbin full                active=0 loc=0 gainRMS=9.39023e-05 reuse= 1.5s
+  global_offbin spatial_validated   active=0 loc=0 gainRMS=9.39023e-05 reuse=full 0.1s
+  same_frequency median              active=0 loc=0 gainRMS=0.0145354 reuse= 1.4s
+  same_frequency pn                  active=0 loc=0 gainRMS=9.71742e-05 reuse= 1.2s
+  same_frequency full                active=0 loc=0 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency spatial_validated   active=0 loc=0 gainRMS=0.0145354 reuse=median 0.0s
+  gaussian_patch median              active=0 loc=0 gainRMS=0.0268212 reuse= 0.7s
+  gaussian_patch pn                  active=0 loc=0 gainRMS=0.0159309 reuse= 0.7s
+  gaussian_patch full                active=0 loc=0 gainRMS=0.0268212 reuse=median 0.1s
+  gaussian_patch spatial_validated   active=0 loc=0 gainRMS=0.0268212 reuse=median 0.2s
+  tilted_smooth median              active=0 loc=0 gainRMS=0.0325572 reuse= 0.7s
+  tilted_smooth pn                  active=0 loc=0 gainRMS=0.0100074 reuse= 1.3s
+  tilted_smooth full                active=0 loc=0 gainRMS=0.00998985 reuse= 1.4s
+  tilted_smooth spatial_validated   active=0 loc=0 gainRMS=0.00424029 reuse= 0.9s
+  oblique_step median              active=0 loc=0 gainRMS=0.0364707 reuse= 0.8s
+  oblique_step pn                  active=0 loc=0 gainRMS=0.0278642 reuse= 0.7s
+  oblique_step full                active=0 loc=0 gainRMS=0.0364707 reuse=median 0.0s
+  oblique_step spatial_validated   active=0 loc=0 gainRMS=0.0364707 reuse=median 0.1s
+mono30 完成视频1/1：19.6s，组已用19.8s
+mono30 视频1 已有完整兼容结果，跳过。
+mono100 视频1/1 seed=881001，六条件渲染 0.8s
+  static median              active=1 loc=100 gainRMS=0 reuse= 1.3s
+  static pn                  active=1 loc=100 gainRMS=0.000987156 reuse= 1.2s
+  static full                active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  static spatial_validated   active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  global_offbin median              active=1 loc=100 gainRMS=0.0563053 reuse= 1.2s
+  global_offbin pn                  active=1 loc=100 gainRMS=0.000986728 reuse= 1.2s
+  global_offbin full                active=1 loc=100 gainRMS=0.000106097 reuse= 1.3s
+  global_offbin spatial_validated   active=1 loc=100 gainRMS=0.000106097 reuse=full 0.1s
+  same_frequency median              active=1 loc=100 gainRMS=0.0145354 reuse= 1.0s
+  same_frequency pn                  active=1 loc=100 gainRMS=0.000987609 reuse= 1.1s
+  same_frequency full                active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency spatial_validated   active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  gaussian_patch median              active=1 loc=100 gainRMS=0.0268212 reuse= 1.3s
+  gaussian_patch pn                  active=1 loc=100 gainRMS=0.0159751 reuse= 1.3s
+  gaussian_patch full                active=1 loc=100 gainRMS=0.0268212 reuse=median 0.1s
+  gaussian_patch spatial_validated   active=1 loc=100 gainRMS=0.0268212 reuse=median 0.1s
+  tilted_smooth median              active=1 loc=100 gainRMS=0.0325572 reuse= 1.3s
+  tilted_smooth pn                  active=1 loc=100 gainRMS=0.0100773 reuse= 1.3s
+  tilted_smooth full                active=1 loc=100 gainRMS=0.0104132 reuse= 1.2s
+  tilted_smooth spatial_validated   active=1 loc=100 gainRMS=0.0104132 reuse=full 0.2s
+  oblique_step median              active=1 loc=100 gainRMS=0.0364707 reuse= 1.4s
+  oblique_step pn                  active=1 loc=100 gainRMS=0.0278807 reuse= 1.2s
+  oblique_step full                active=1 loc=100 gainRMS=0.0364707 reuse=median 0.0s
+  oblique_step spatial_validated   active=1 loc=100 gainRMS=0.0364707 reuse=median 0.0s
+mono100 完成视频1/1：18.7s，组已用18.8s
+mono100 视频1 已有完整兼容结果，跳过。
+mono200 视频1/1 seed=882001，六条件渲染 0.7s
+  static median              active=1 loc=100 gainRMS=0 reuse= 1.2s
+  static pn                  active=1 loc=100 gainRMS=0.000738493 reuse= 1.2s
+  static full                active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  static spatial_validated   active=1 loc=100 gainRMS=0 reuse=median 0.1s
+  global_offbin median              active=1 loc=100 gainRMS=0.0563053 reuse= 1.2s
+  global_offbin pn                  active=1 loc=100 gainRMS=0.000738791 reuse= 1.2s
+  global_offbin full                active=1 loc=100 gainRMS=8.68749e-05 reuse= 1.2s
+  global_offbin spatial_validated   active=1 loc=100 gainRMS=8.68749e-05 reuse=full 0.1s
+  same_frequency median              active=1 loc=100 gainRMS=0.0145354 reuse= 1.3s
+  same_frequency pn                  active=1 loc=100 gainRMS=0.000738768 reuse= 1.2s
+  same_frequency full                active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency spatial_validated   active=1 loc=100 gainRMS=0.0145354 reuse=median 0.1s
+  gaussian_patch median              active=1 loc=100 gainRMS=0.0268212 reuse= 1.2s
+  gaussian_patch pn                  active=1 loc=100 gainRMS=0.0159641 reuse= 1.3s
+  gaussian_patch full                active=1 loc=100 gainRMS=0.0268212 reuse=median 0.1s
+  gaussian_patch spatial_validated   active=1 loc=100 gainRMS=0.0268212 reuse=median 0.1s
+  tilted_smooth median              active=1 loc=100 gainRMS=0.0325572 reuse= 1.2s
+  tilted_smooth pn                  active=1 loc=100 gainRMS=0.0100426 reuse= 1.2s
+  tilted_smooth full                active=1 loc=100 gainRMS=0.0101405 reuse= 1.3s
+  tilted_smooth spatial_validated   active=1 loc=100 gainRMS=0.0101405 reuse=full 0.1s
+  oblique_step median              active=1 loc=100 gainRMS=0.0364707 reuse= 1.4s
+  oblique_step pn                  active=1 loc=100 gainRMS=0.0278719 reuse= 1.3s
+  oblique_step full                active=1 loc=100 gainRMS=0.0364707 reuse=median 0.0s
+  oblique_step spatial_validated   active=1 loc=100 gainRMS=0.0364707 reuse=median 0.1s
+mono200 完成视频1/1：18.5s，组已用18.7s
+mono200 视频1 已有完整兼容结果，跳过。
+                   passed: 1
+                   groups: 3
+               conditions: 6
+                  methods: 4
+                   frames: 100
+    checkpoint_and_resume: 1
+                    scope: 'synthetic runner fixture, not formal performance data'
+

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "groups": 3,
+  "conditions": 6,
+  "methods": 6,
+  "frames": 100,
+  "checkpoint_and_resume": true,
+  "scope": "synthetic runner fixture, not formal performance data"
+}

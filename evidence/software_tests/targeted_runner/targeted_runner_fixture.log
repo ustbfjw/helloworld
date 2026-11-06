@@ -1,0 +1,126 @@
+协议已冻结：C:/Users/PC/Documents/Codex/2026-11-05/c-users-pc-desktop-inta-magnetic/work/targeted_runner_fixture
+mono30 视频1/1 seed=111001，六条件渲染 1.1s
+  static median              active=0 loc=0 gainRMS=0 reuse= 0.7s
+  static pn                  active=0 loc=0 gainRMS=8.50563e-05 reuse= 0.4s
+  static full                active=0 loc=0 gainRMS=0 reuse=median 0.0s
+  static no_spatial_gate     active=0 loc=0 gainRMS=0 reuse=median 0.0s
+  static no_magnetic_guard   active=0 loc=0 gainRMS=0 reuse=median 0.0s
+  static no_refinement       active=0 loc=0 gainRMS=0 reuse=median 0.0s
+  global_offbin median              active=0 loc=0 gainRMS=0.0563053 reuse= 0.4s
+  global_offbin pn                  active=0 loc=0 gainRMS=8.488e-05 reuse= 0.4s
+  global_offbin full                active=0 loc=0 gainRMS=0.000105536 reuse= 0.5s
+  global_offbin no_spatial_gate     active=0 loc=0 gainRMS=0.000105536 reuse=full 0.0s
+  global_offbin no_magnetic_guard   active=0 loc=0 gainRMS=0.000105536 reuse=full 0.0s
+  global_offbin no_refinement       active=1 loc=47 gainRMS=0.0414726 reuse= 0.4s
+  near_inside median              active=0 loc=0 gainRMS=0.0144186 reuse= 0.4s
+  near_inside pn                  active=0 loc=0 gainRMS=8.3932e-05 reuse= 0.4s
+  near_inside full                active=0 loc=0 gainRMS=0.0144186 reuse=median 0.0s
+  near_inside no_spatial_gate     active=0 loc=0 gainRMS=0.0144186 reuse=median 0.0s
+  near_inside no_magnetic_guard   active=0 loc=0 gainRMS=0.0144186 reuse=median 0.0s
+  near_inside no_refinement       active=0 loc=0 gainRMS=0.0144186 reuse=median 0.0s
+  near_outside median              active=0 loc=0 gainRMS=0.0136359 reuse= 0.4s
+  near_outside pn                  active=0 loc=0 gainRMS=8.38618e-05 reuse= 0.4s
+  near_outside full                active=0 loc=0 gainRMS=0.0136359 reuse=median 0.0s
+  near_outside no_spatial_gate     active=0 loc=0 gainRMS=0.0136359 reuse=median 0.0s
+  near_outside no_magnetic_guard   active=0 loc=0 gainRMS=0.0136359 reuse=median 0.0s
+  near_outside no_refinement       active=0 loc=0 gainRMS=0.0136359 reuse=median 0.0s
+  same_frequency median              active=0 loc=0 gainRMS=0.0145354 reuse= 0.4s
+  same_frequency pn                  active=0 loc=0 gainRMS=8.39734e-05 reuse= 0.4s
+  same_frequency full                active=0 loc=0 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency no_spatial_gate     active=0 loc=0 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency no_magnetic_guard   active=0 loc=0 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency no_refinement       active=0 loc=0 gainRMS=0.0145354 reuse=median 0.0s
+  local_left_half median              active=0 loc=0 gainRMS=0.0398138 reuse= 0.2s
+  local_left_half pn                  active=0 loc=0 gainRMS=0.0282461 reuse= 0.2s
+  local_left_half full                active=0 loc=0 gainRMS=0.0398138 reuse=median 0.0s
+  local_left_half no_spatial_gate     active=0 loc=0 gainRMS=0.0282456 reuse= 0.2s
+  local_left_half no_magnetic_guard   active=0 loc=0 gainRMS=0.0398138 reuse=median 0.0s
+  local_left_half no_refinement       active=0 loc=0 gainRMS=0.0398138 reuse=median 0.0s
+mono30 完成视频1/1：6.9s，组已用7.0s
+mono30 视频1 已有完整兼容结果，跳过。
+mono100 视频1/1 seed=222001，六条件渲染 0.3s
+  static median              active=1 loc=100 gainRMS=0 reuse= 0.4s
+  static pn                  active=1 loc=100 gainRMS=0.000871696 reuse= 0.4s
+  static full                active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  static no_spatial_gate     active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  static no_magnetic_guard   active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  static no_refinement       active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  global_offbin median              active=1 loc=100 gainRMS=0.0563053 reuse= 0.4s
+  global_offbin pn                  active=1 loc=100 gainRMS=0.00087236 reuse= 0.3s
+  global_offbin full                active=1 loc=100 gainRMS=9.88541e-05 reuse= 0.4s
+  global_offbin no_spatial_gate     active=1 loc=100 gainRMS=9.88541e-05 reuse=full 0.0s
+  global_offbin no_magnetic_guard   active=1 loc=100 gainRMS=9.88541e-05 reuse=full 0.0s
+  global_offbin no_refinement       active=1 loc=100 gainRMS=0.0414725 reuse= 0.4s
+  near_inside median              active=1 loc=100 gainRMS=0.0144186 reuse= 0.3s
+  near_inside pn                  active=1 loc=100 gainRMS=0.000871884 reuse= 0.4s
+  near_inside full                active=1 loc=100 gainRMS=0.0144186 reuse=median 0.0s
+  near_inside no_spatial_gate     active=1 loc=100 gainRMS=0.0144186 reuse=median 0.0s
+  near_inside no_magnetic_guard   active=1 loc=100 gainRMS=0.0144186 reuse=median 0.0s
+  near_inside no_refinement       active=1 loc=100 gainRMS=0.0144186 reuse=median 0.0s
+  near_outside median              active=1 loc=100 gainRMS=0.0136359 reuse= 0.3s
+  near_outside pn                  active=1 loc=100 gainRMS=0.000872111 reuse= 0.4s
+  near_outside full                active=1 loc=100 gainRMS=0.0136359 reuse=median 0.0s
+  near_outside no_spatial_gate     active=1 loc=100 gainRMS=0.0136359 reuse=median 0.0s
+  near_outside no_magnetic_guard   active=1 loc=100 gainRMS=0.0136359 reuse=median 0.0s
+  near_outside no_refinement       active=1 loc=100 gainRMS=0.0136359 reuse=median 0.0s
+  same_frequency median              active=1 loc=100 gainRMS=0.0145354 reuse= 0.4s
+  same_frequency pn                  active=1 loc=100 gainRMS=0.000871224 reuse= 0.3s
+  same_frequency full                active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency no_spatial_gate     active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency no_magnetic_guard   active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency no_refinement       active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  local_left_half median              active=1 loc=100 gainRMS=0.0398138 reuse= 0.4s
+  local_left_half pn                  active=1 loc=100 gainRMS=0.028262 reuse= 0.4s
+  local_left_half full                active=1 loc=100 gainRMS=0.0398138 reuse=median 0.0s
+  local_left_half no_spatial_gate     active=1 loc=100 gainRMS=0.0282457 reuse= 0.4s
+  local_left_half no_magnetic_guard   active=1 loc=100 gainRMS=0.0398138 reuse=median 0.0s
+  local_left_half no_refinement       active=1 loc=100 gainRMS=0.0398138 reuse=median 0.0s
+mono100 完成视频1/1：5.8s，组已用5.9s
+mono100 视频1 已有完整兼容结果，跳过。
+mono200 视频1/1 seed=333001，六条件渲染 0.2s
+  static median              active=1 loc=100 gainRMS=0 reuse= 0.3s
+  static pn                  active=1 loc=100 gainRMS=0.000791071 reuse= 0.4s
+  static full                active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  static no_spatial_gate     active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  static no_magnetic_guard   active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  static no_refinement       active=1 loc=100 gainRMS=0 reuse=median 0.0s
+  global_offbin median              active=1 loc=100 gainRMS=0.0563053 reuse= 0.3s
+  global_offbin pn                  active=1 loc=100 gainRMS=0.000791968 reuse= 0.4s
+  global_offbin full                active=1 loc=100 gainRMS=0.000138305 reuse= 0.4s
+  global_offbin no_spatial_gate     active=1 loc=100 gainRMS=0.000138305 reuse=full 0.0s
+  global_offbin no_magnetic_guard   active=1 loc=100 gainRMS=0.000138305 reuse=full 0.0s
+  global_offbin no_refinement       active=1 loc=100 gainRMS=0.0414726 reuse= 0.3s
+  near_inside median              active=1 loc=100 gainRMS=0.0144186 reuse= 0.4s
+  near_inside pn                  active=1 loc=100 gainRMS=0.000791808 reuse= 0.4s
+  near_inside full                active=1 loc=100 gainRMS=0.0144186 reuse=median 0.0s
+  near_inside no_spatial_gate     active=1 loc=100 gainRMS=0.0144186 reuse=median 0.0s
+  near_inside no_magnetic_guard   active=1 loc=100 gainRMS=0.0144186 reuse=median 0.0s
+  near_inside no_refinement       active=1 loc=100 gainRMS=0.0144186 reuse=median 0.0s
+  near_outside median              active=1 loc=100 gainRMS=0.0136359 reuse= 0.3s
+  near_outside pn                  active=1 loc=100 gainRMS=0.000791591 reuse= 0.4s
+  near_outside full                active=1 loc=100 gainRMS=0.0136359 reuse=median 0.0s
+  near_outside no_spatial_gate     active=1 loc=100 gainRMS=0.0136359 reuse=median 0.0s
+  near_outside no_magnetic_guard   active=1 loc=100 gainRMS=0.0136359 reuse=median 0.0s
+  near_outside no_refinement       active=1 loc=100 gainRMS=0.0136359 reuse=median 0.0s
+  same_frequency median              active=1 loc=100 gainRMS=0.0145354 reuse= 0.4s
+  same_frequency pn                  active=1 loc=100 gainRMS=0.000791832 reuse= 0.4s
+  same_frequency full                active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency no_spatial_gate     active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency no_magnetic_guard   active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  same_frequency no_refinement       active=1 loc=100 gainRMS=0.0145354 reuse=median 0.0s
+  local_left_half median              active=1 loc=100 gainRMS=0.0398138 reuse= 0.4s
+  local_left_half pn                  active=1 loc=100 gainRMS=0.0282589 reuse= 0.4s
+  local_left_half full                active=1 loc=100 gainRMS=0.0398138 reuse=median 0.0s
+  local_left_half no_spatial_gate     active=1 loc=100 gainRMS=0.0282456 reuse= 0.4s
+  local_left_half no_magnetic_guard   active=1 loc=100 gainRMS=0.0398138 reuse=median 0.0s
+  local_left_half no_refinement       active=1 loc=100 gainRMS=0.0398138 reuse=median 0.0s
+mono200 完成视频1/1：5.8s，组已用5.9s
+mono200 视频1 已有完整兼容结果，跳过。
+                   passed: 1
+                   groups: 3
+               conditions: 6
+                  methods: 6
+                   frames: 100
+    checkpoint_and_resume: 1
+                    scope: 'synthetic runner fixture, not formal performance data'
+

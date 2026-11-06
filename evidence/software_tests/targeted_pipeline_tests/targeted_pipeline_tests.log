@@ -1,0 +1,7 @@
+                          passed: 1
+                        n_tracks: 1
+                          frames: 500
+    external_normalization_equal: 1
+             pn_definition_equal: 1
+                           scope: 'fixture with centered initial particles, used only for numerical integration test, not formal sizing evidence'
+

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "incomplete_rejected_before_output": true,
+  "modified_statistics_rejected": true,
+  "no_success_manifest_on_mismatch": true,
+  "all_empty_groups_skipped": true,
+  "rng_restored": true,
+  "checkcode": [],
+  "scope": "Synthetic failure guards only; does not alter formal results",
+  "comment_only_suppression_cleanup": true
+}

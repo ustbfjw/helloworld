@@ -1,0 +1,18 @@
+{
+  "scope": "Renderer correctness only; held-out shapes are not estimator acceptance",
+  "frames_per_group": 100,
+  "camera_Npx": 128,
+  "exposure_samples": 4,
+  "baseline_exact_cases": 18,
+  "stationary_gain_cases": 9,
+  "pixel_reference_cases": 9,
+  "wrong_exposure_order_different_pixels": 3981,
+  "wrong_noise_order_different_pixels": 1289,
+  "maximum_stationary_adu_error": 1.0372837791365441,
+  "maximum_mask_error": 2.2204460492503131E-16,
+  "baseline_metadata_rng_exact": true,
+  "zero_amplitude_identity": true,
+  "unknown_shape_rejected": true,
+  "pass": true,
+  "elapsed_seconds": 16.6198806
+}
